@@ -3,6 +3,8 @@ import { Characters } from "./Characters";
 import { useState } from "react";
 import ryuImage from "../assets/SF6/ryu.png";
 import kenImage from "../assets/SF6/ken.png";
+import kimImage from "../assets/SF6/kimberly.png";
+import solImage from "../assets/GGST/SolBadguy.png";
 
 export const SF6Content = () => {
   // Characters in the game and images
@@ -14,6 +16,10 @@ export const SF6Content = () => {
     {
       name: "Ken",
       image: kenImage,
+    },
+    {
+      name: "Kimberly",
+      image: kimImage,
     },
   ];
   const [selectedChar, setSelectedChar] = useState<string>("");
@@ -44,3 +50,5 @@ export const SF6Content = () => {
     </>
   );
 };
+
+// need to be able to separate left and right content; left content should be scrollable and right content should be static

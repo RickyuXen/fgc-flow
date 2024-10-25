@@ -30,7 +30,8 @@
   }
 
   .characters-list li{
-    margin: 1rem 0 1rem 0;
+    margin: 0;
+    transition: all 0.3s ease;
   }
 
   .characters-list li:hover{
@@ -42,18 +43,29 @@
 
   .characters-list li.active{
     background-color: #555;
-    color: #00ccff;
+    color: rgb(121, 238, 121);
     font-weight: bold;
     border-radius: 1rem;
+  }
+
+  .nameTagContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    min-width: 8rem;
+    max-width: 10rem;
+    height: 8rem; 
+    border-radius: 1rem;
+    text-align: center;
   }
   
   .nameTag{
     font-family: 'Exo', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    background-color: #1d1b1b;
     border-radius: 1rem;
-    letter-spacing: 0.2rem;
-    position: relative;
-    top: -3.5rem;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    white-space: nowrap;
   }

@@ -16,6 +16,11 @@ export const Characters = (props: CharacterProps) => {
         {props.characters.map((character, index) => {
           return (
             <li
+              style={{
+                display: "flex",
+                alignItems: "center",
+                margin: "1rem 0",
+              }}
               className={props.selectedCharacter === index ? "active" : ""}
               key={character.name}
               onClick={() => {
@@ -29,11 +34,12 @@ export const Characters = (props: CharacterProps) => {
                   width: "16rem",
                   height: "8rem",
                   borderRadius: "10%",
-                  marginRight: "2rem",
-                  marginTop: "0.5rem",
+                  marginRight: "1rem",
                 }}
               />
-              <span className="nameTag">{character.name}</span>
+              <div className="nameTagContainer">
+                <span className="nameTag">{character.name}</span>
+              </div>
             </li>
           );
         })}

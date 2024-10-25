@@ -40,4 +40,4 @@ function App() {
 
 export default App;
 
-// Make FGC-FLOW a clickable link
+// find out and figure out how to make nameTag text center on the right side of li justify right + justify center? idk

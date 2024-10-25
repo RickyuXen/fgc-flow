@@ -32,6 +32,9 @@ body {
 
 .sidebar ul li {
   margin: 10px 0;
+  font-size: 1.2rem;
+  padding: 1.2rem 1rem;
+  transition:all 0.3s ease;
 }
 
 .sidebar ul li:hover {
