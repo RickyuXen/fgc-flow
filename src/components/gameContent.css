@@ -16,8 +16,8 @@
   /* Left column - 25% width */
   .left {
     flex: 1;
-    border-right: 2px solid #555;
-    border-left: 2px solid #555;
+    border-right: 0.25rem solid #555;
+    border-left: 0.25rem solid #555;
     height: 47rem;
     overflow-y: auto; /* Enable vertical scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -34,8 +34,8 @@
   .right {
     flex: 3;
     display: flex;
-    border-right: 2px solid #555;
-    border-left: 2px solid #555;
+    border-right: 0.25rem solid #555;
+    border-left: 0.25rem solid #555;
     overflow: hidden;
     position: relative;
   }

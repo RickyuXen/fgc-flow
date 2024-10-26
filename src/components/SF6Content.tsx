@@ -14,6 +14,7 @@ interface CharacterInfo {
   difficulty: string;
   video: string;
   notablePlayers: string[];
+  color: string;
 }
 
 export const SF6Content = () => {
@@ -50,7 +51,7 @@ export const SF6Content = () => {
     },
   ];
   let characterInfos = [
-    // all info about character, passed to right content
+    // all info about character, passed to right content; maybe add border colour to dynamically change that
     {
       name: "Ryu",
       tags: ["Shoto", "Neutral", "Corner-Carry", "Beard"],
@@ -58,6 +59,7 @@ export const SF6Content = () => {
       difficulty: "2/5",
       video: "https://www.youtube.com/watch?v=-9MB38W2Gfw",
       notablePlayers: ["Paladin"],
+      color: "#555",
     },
     {
       name: "Ken",
@@ -66,6 +68,16 @@ export const SF6Content = () => {
       difficulty: "3/5",
       video: "https://www.youtube.com/watch?v=gip4mso1h70",
       notablePlayers: ["Daigo"],
+      color: "red",
+    },
+    {
+      name: "Kimberly",
+      tags: ["Shoto", "Neutral", "Corner-Carry", "Feet"],
+      overview: "Some overview on Ken",
+      difficulty: "4/5",
+      video: "https://www.youtube.com/watch?v=A0q2oXL0G74",
+      notablePlayers: ["Diaphone"],
+      color: "#AA336A",
     },
   ];
   let gameInfo = {
@@ -92,14 +104,20 @@ export const SF6Content = () => {
   return (
     <>
       <div className="container">
-        <div className="column left">
+        <div
+          className="column left"
+          style={{ borderColor: selectedCharInfo?.color || "#555" }}
+        >
           <Characters
             characters={characters}
             selectedCharacter={selectedIndex}
             onSelectChar={handleSelectChar}
           />
         </div>
-        <div className="column right">
+        <div
+          className="column right"
+          style={{ borderColor: selectedCharInfo?.color || "#555" }}
+        >
           <RightContent
             key={selectedCharInfo ? selectedCharInfo.name : "game-info"}
             CharacterInfo={selectedCharInfo}
