@@ -19,7 +19,7 @@ export const Characters = (props: CharacterProps) => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                margin: "0.5rem 0",
+                margin: "0.741vh 0",
               }}
               className={props.selectedCharacter === index ? "active" : ""}
               key={character.name}
@@ -31,10 +31,10 @@ export const Characters = (props: CharacterProps) => {
                 src={character.image}
                 alt={character.name}
                 style={{
-                  width: "14rem",
-                  height: "7rem",
+                  width: "20.741vh",
+                  height: "10.37vh",
                   borderRadius: "10%",
-                  marginRight: "1rem",
+                  marginRight: "1.481vh",
                 }}
               />
               <div className="nameTagContainer">
