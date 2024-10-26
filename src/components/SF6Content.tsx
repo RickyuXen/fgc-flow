@@ -5,10 +5,21 @@ import ryuImage from "../assets/SF6/ryu.png";
 import kenImage from "../assets/SF6/ken.png";
 import kimImage from "../assets/SF6/kimberly.png";
 import solImage from "../assets/GGST/SolBadguy.png";
+import { RightContent } from "./RightContent";
+
+interface CharacterInfo {
+  name: string;
+  tags: string[];
+  overview: string;
+  difficulty: string;
+  video: string;
+  notablePlayers: string[];
+}
 
 export const SF6Content = () => {
   // Characters in the game and images
   let characters = [
+    // characters for selection
     {
       name: "Ryu",
       image: ryuImage,
@@ -21,22 +32,67 @@ export const SF6Content = () => {
       name: "Kimberly",
       image: kimImage,
     },
+    {
+      name: "Kimberly",
+      image: kimImage,
+    },
+    {
+      name: "Kimberly",
+      image: kimImage,
+    },
+    {
+      name: "Kimberly",
+      image: kimImage,
+    },
+    {
+      name: "Kimberly",
+      image: kimImage,
+    },
   ];
-  const [selectedChar, setSelectedChar] = useState<string>("");
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const handleSelectChar = (char: string, index: number) => {
-    console.log(char);
-    setSelectedChar(char);
+  let characterInfos = [
+    // all info about character, passed to right content
+    {
+      name: "Ryu",
+      tags: ["Shoto", "Neutral", "Corner-Carry", "Beard"],
+      overview: "Some overview on Ryu",
+      difficulty: "2/5",
+      video: "https://www.youtube.com/watch?v=-9MB38W2Gfw",
+      notablePlayers: ["Paladin"],
+    },
+    {
+      name: "Ken",
+      tags: ["Shoto", "Neutral", "Corner-Carry", "Feet"],
+      overview: "Some overview on Ken",
+      difficulty: "3/5",
+      video: "https://www.youtube.com/watch?v=gip4mso1h70",
+      notablePlayers: ["Daigo"],
+    },
+  ];
+  let gameInfo = {
+    mainInfo: "Street Fighter 6 is ...",
+    datePublished: "2023",
+    publisher: "Capcom",
+    video: "video/sf6main",
+  };
+
+  const [selectedChar, setSelectedChar] = useState<string>(""); // useState to store selected character
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // useState to store index
+  const [selectedCharInfo, setSelectedCharInfo] = // useState to store selected character and character info
+    useState<CharacterInfo | null>(null);
+  const handleSelectChar = (characterName: string, index: number) => {
+    console.log(characterName);
+    const foundCharInfo = characterInfos.find(
+      (char) => char.name === characterName
+    );
+    setSelectedChar(characterName);
     setSelectedIndex(index);
+    setSelectedCharInfo(foundCharInfo || null);
   };
 
   return (
     <>
       <div className="container">
         <div className="column left">
-          Left Content (25%) component of lists of title characters that can
-          interact; need usestate as well for this page to determine if one is
-          selected
           <Characters
             characters={characters}
             selectedCharacter={selectedIndex}
@@ -44,7 +100,11 @@ export const SF6Content = () => {
           />
         </div>
         <div className="column right">
-          Right Content (75%) Content determined by usestate?
+          <RightContent
+            key={selectedCharInfo ? selectedCharInfo.name : "game-info"}
+            CharacterInfo={selectedCharInfo}
+            GameInfo={gameInfo}
+          />
         </div>
       </div>
     </>

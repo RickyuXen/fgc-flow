@@ -2,11 +2,10 @@ import Section from "./Section";
 
 interface MainProps {
   selectedGame: string;
-  selectedGameContent: string;
   onClearSection: () => void;
 }
 
-const MainContent = (props: MainProps) => {
+export const MainContent = (props: MainProps) => {
   return (
     <div className="main-content">
       <div className="header" onClick={props.onClearSection}>

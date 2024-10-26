@@ -7,19 +7,16 @@ import "./App.css"; // Optional: for global styles
 
 function App() {
   let gameList = ["Street Fighter 6", "Guilty Gear Strive", "..."];
-  const [selectedGame, setSelectedGame] = useState<string>("");
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [selectedGameContent, setGameContent] = useState<string>("");
+  const [selectedGame, setSelectedGame] = useState<string>(""); // selected game
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // selected game index
   const handleClearSection = () => {
     setSelectedGame("");
     setSelectedIndex(null);
-    setGameContent("");
   };
   const handleSelectItem = (item: string, index: number) => {
     console.log(item);
     setSelectedGame(item);
     setSelectedIndex(index);
-    setGameContent(item);
   };
 
   return (
@@ -31,7 +28,6 @@ function App() {
       />
       <MainContent
         selectedGame={selectedGame}
-        selectedGameContent={selectedGameContent}
         onClearSection={handleClearSection}
       />
     </div>

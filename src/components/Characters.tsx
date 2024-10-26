@@ -19,7 +19,7 @@ export const Characters = (props: CharacterProps) => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                margin: "1rem 0",
+                margin: "0.5rem 0",
               }}
               className={props.selectedCharacter === index ? "active" : ""}
               key={character.name}
@@ -31,8 +31,8 @@ export const Characters = (props: CharacterProps) => {
                 src={character.image}
                 alt={character.name}
                 style={{
-                  width: "16rem",
-                  height: "8rem",
+                  width: "14rem",
+                  height: "7rem",
                   borderRadius: "10%",
                   marginRight: "1rem",
                 }}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 interface SidebarProps {
   gameTitle: string[];
@@ -6,12 +6,26 @@ interface SidebarProps {
   onSelectItem: (gameTitle: string, index: number) => void;
 }
 
-const Sidebar = (props: SidebarProps) => {
+const Sidebar = ({ gameTitle, selectedIndex, onSelectItem }: SidebarProps) => {
+  const [searchQuery, setSearchQuery] = useState<string>(""); // State for search input
+  const [filteredTitles, setFilteredTitles] = useState<string[]>(gameTitle); // Filtered titles
+
+  // Filter game titles based on search query
+  useEffect(() => {
+    setFilteredTitles(
+      gameTitle.filter((title) =>
+        title.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    );
+  }, [searchQuery, gameTitle]);
+
   return (
     <div className="sidebar">
       <input
         type="text"
         placeholder="Search"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)} // Update search input
         style={{
           width: "100%",
           padding: "8px",
@@ -22,21 +36,24 @@ const Sidebar = (props: SidebarProps) => {
         }}
       />
       <h2>Games</h2>
-      <ul>
-        {props.gameTitle.map((gameTitle, index) => {
-          return (
+      {filteredTitles.length === 0 ? (
+        <p>No matching games found.</p>
+      ) : (
+        <ul>
+          {filteredTitles.map((title, index) => (
             <li
-              className={props.selectedIndex === index ? "active" : ""}
-              key={gameTitle}
-              onClick={() => {
-                props.onSelectItem(gameTitle, index);
-              }}
+              key={title}
+              className={
+                // Check if the original index matches the selectedIndex
+                gameTitle.indexOf(title) === selectedIndex ? "active" : ""
+              }
+              onClick={() => onSelectItem(title, gameTitle.indexOf(title))} // Set correct index
             >
-              {gameTitle}
+              {title}
             </li>
-          );
-        })}
-      </ul>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
