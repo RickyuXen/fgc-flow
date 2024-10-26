@@ -1,5 +1,5 @@
 import "./gameContent.css";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, color } from "framer-motion";
 import ReactPlayer from "react-player";
 
 interface CharacterInfo {
@@ -39,8 +39,8 @@ export const RightContent = (props: RightContentProps) => {
               <ReactPlayer
                 url={props.CharacterInfo.video}
                 controls={false}
-                width="560px"
-                height="315px"
+                width="51.852vh"
+                height="29.167vh"
                 playing
               />
             </div>
