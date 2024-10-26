@@ -39,8 +39,8 @@ export const RightContent = (props: RightContentProps) => {
               <ReactPlayer
                 url={props.CharacterInfo.video}
                 controls={false}
-                width="51.852vh"
-                height="29.167vh"
+                width="62.2224vh"
+                height="35vh"
                 playing
               />
             </div>

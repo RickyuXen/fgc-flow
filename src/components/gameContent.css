@@ -42,12 +42,14 @@
 
 .video-content{
   flex: 1;
-  padding: 2.963vh;
+  padding-right: 2vw;
+  padding-top: 0vh;
 }
 
 .characters-information{
   flex: 1;
-  padding: 2.963vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 .characters-list ul{
@@ -103,4 +105,5 @@
   border-top: 0.741vh solid #555;
   border-bottom: 0.741vh solid #555;
   border-radius: 1.481vh;
+  margin-right: 1vw;
 }
