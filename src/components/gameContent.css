@@ -50,6 +50,7 @@
   flex: 1;
   padding-left: 2vw;
   padding-right: 2vw;
+  text-align: left;
 }
 
 .characters-list ul{

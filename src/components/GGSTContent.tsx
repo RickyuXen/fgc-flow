@@ -28,16 +28,8 @@ export const GGSTContent = () => {
       tags: ["Shoto", "Neutral", "Corner-Carry", "Beard"],
       overview: "Some overview on Ryu",
       difficulty: "2/5",
-      video: "./assets/videos/sf6/ryu",
+      video: "https://www.youtube.com/watch?v=Jm0oh5RYTIE",
       notablePlayers: ["Paladin"],
-    },
-    {
-      name: "Ken",
-      tags: ["Shoto", "Neutral", "Corner-Carry", "Feet"],
-      overview: "Some overview on Ken",
-      difficulty: "3/5",
-      video: "./assets/videos/sf6/ken",
-      notablePlayers: ["Daigo"],
     },
   ];
   let gameInfo = {
@@ -45,6 +37,8 @@ export const GGSTContent = () => {
     datePublished: "2021",
     publisher: "ArcSys",
     video: "video/sf6main",
+    fontStyle: "ggstFont",
+    fontSize: "1.5em",
   };
 
   const [selectedChar, setSelectedChar] = useState<string>(""); // useState to store selected character

@@ -34,7 +34,7 @@ body {
 
 .sidebar ul li {
   margin: 1vh 0; /* 10px converted to vh */
-  font-size: 1.7vh; /* 1.2rem converted to vh */
+  font-size: 1.6vh; /* 1.2rem converted to vh */
   padding: 2vh 2vw; /* 1.2rem = 2.2vh, 1rem = 2vw */
   font-weight: bold;
   transition: all 0.3s ease;

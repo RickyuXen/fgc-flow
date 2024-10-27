@@ -1,4 +1,5 @@
 import "./gameContent.css";
+import "../fonts.css";
 import { motion, AnimatePresence, color } from "framer-motion";
 import ReactPlayer from "react-player";
 
@@ -6,6 +7,7 @@ interface CharacterInfo {
   name: string;
   tags: string[];
   overview: string;
+  resources?: string[];
   difficulty: string;
   video: string;
   notablePlayers: string[];
@@ -15,6 +17,8 @@ interface GameInfo {
   mainInfo: string;
   datePublished: string;
   publisher: string;
+  fontStyle?: string;
+  fontSize?: string;
 }
 
 interface RightContentProps {
@@ -34,6 +38,11 @@ export const RightContent = (props: RightContentProps) => {
             exit={{ opacity: 0, x: -200 }} // Exit to the left
             transition={{ duration: 0.75, ease: "easeInOut" }}
             className="video-content" // Apply CSS class
+            style={{
+              fontFamily: `${props.GameInfo.fontStyle}, sans-serif`,
+              fontSize: `${props.GameInfo.fontSize}`,
+              letterSpacing: "0.125vh",
+            }}
           >
             <div className="video-container">
               <ReactPlayer
@@ -44,8 +53,13 @@ export const RightContent = (props: RightContentProps) => {
                 playing
               />
             </div>
-            <div className="tags-under-video">
-              {props.CharacterInfo.tags.join(", ")}
+            <div className="values-under-video">
+              <div className="tags-under-video">
+                {props.CharacterInfo.tags.join(", ")}
+              </div>
+              <div className="difficulty-under-video">
+                {props.CharacterInfo.difficulty}
+              </div>
             </div>
           </motion.div>
 
@@ -56,13 +70,19 @@ export const RightContent = (props: RightContentProps) => {
             exit={{ opacity: 0, x: 200 }} // Exit to the right
             transition={{ duration: 0.75, ease: "easeInOut" }}
             className="characters-information" // Apply CSS class
+            style={{
+              fontFamily: `${props.GameInfo.fontStyle}, sans-serif`,
+              fontSize: `${props.GameInfo.fontSize}`,
+              letterSpacing: "0.125vh",
+            }}
           >
-            <h2>{props.CharacterInfo.name}</h2>
+            <h2 style={{ textAlign: "center" }}>{props.CharacterInfo.name}</h2>
             <p>Overview: {props.CharacterInfo.overview}</p>
             <p>Difficulty: {props.CharacterInfo.difficulty}</p>
             <p>
               Notable Players: {props.CharacterInfo.notablePlayers.join(", ")}
             </p>
+            <p>{props.CharacterInfo.resources}</p>
           </motion.div>
         </>
       ) : (

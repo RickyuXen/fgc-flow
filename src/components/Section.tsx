@@ -2,6 +2,7 @@ import React from "react";
 import BottomLinks from "./BottomLinks";
 import { SF6Content } from "./SF6Content";
 import { GGSTContent } from "./GGSTContent";
+import { TxkoContent } from "./TxkoContent";
 
 interface SectionProps {
   title: string;
@@ -19,6 +20,8 @@ const Section = (props: SectionProps) => {
         return <SF6Content />;
       case "Guilty Gear Strive":
         return <GGSTContent />;
+      case "2XKO":
+        return <TxkoContent />;
       default:
         return <p>Error: Section not found.</p>;
     }
