@@ -21,7 +21,7 @@ interface CharacterInfo {
 export const SF6Content = () => {
   // Characters in the game and images
   let characters = [
-    // characters for selection
+    // Values used in left-character selection
     {
       name: "Ryu",
       image: ryuImage,
@@ -55,7 +55,7 @@ export const SF6Content = () => {
     },
   ];
   let characterInfos = [
-    // all info about character, passed to right content; maybe add border colour to dynamically change that
+    // all info about character, passed to right-side content
     {
       name: "Ryu",
       tags: ["Shoto", "Neutral", "Corner-Carry", "Beard"],
@@ -88,12 +88,13 @@ export const SF6Content = () => {
     },
   ];
   let gameInfo = {
+    // game info used for overall font and page when no character selected.
     mainInfo: "Street Fighter 6 is ...",
     datePublished: "2023",
     publisher: "Capcom",
     video: "video/sf6main",
     fontStyle: "sf6Font",
-    fontSize: "1.5em",
+    fontSize: "1.2em",
   };
 
   const [selectedChar, setSelectedChar] = useState<string>(""); // useState to store selected character
@@ -124,8 +125,9 @@ export const SF6Content = () => {
           style={
             {
               borderColor: selectedCharInfo?.color || "#555",
-              fontSize: "4vh", // adjust values based on font
+              fontSize: "3.5vh", // adjust values based on font
               letterSpacing: "0vw",
+              textTransform: "uppercase",
               "--active-color": selectedCharInfo?.color || "rgb(121, 238, 121)",
             } as React.CSSProperties
           }

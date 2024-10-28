@@ -27,12 +27,13 @@ const Sidebar = ({ gameTitle, selectedIndex, onSelectItem }: SidebarProps) => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)} // Update search input
         style={{
-          width: "100%",
-          padding: "8px",
+          width: "80%",
+          padding: "0.4vw",
+          marginLeft: "1vw",
+          marginBottom: "-1vh",
           borderRadius: "16px",
-          marginTop: "10px",
-          marginLeft: "-10px",
           border: "1px solid #ccc",
+          textAlign: "center",
         }}
       />
       <h2>Games</h2>

@@ -4,6 +4,7 @@ import { RightContent } from "../components/RightContent";
 import { useState } from "react";
 import solImage from "../assets/GGST/SolBadguy.png";
 import kyImage from "../assets/GGST/KyKiske.png";
+import mayImage from "../assets/GGST/May.png";
 
 interface CharacterInfo {
   name: string;
@@ -29,6 +30,11 @@ export const GGSTContent = () => {
       image: kyImage,
       color: "#318CE7",
     },
+    {
+      name: "May",
+      image: mayImage,
+      color: "#FF8C00",
+    },
   ];
   let characterInfos = [
     // all info about character, passed to right content
@@ -50,6 +56,15 @@ export const GGSTContent = () => {
       notablePlayers: ["IDK"],
       color: "#318CE7",
     },
+    {
+      name: "May",
+      tags: ["Charge", "TOTSUGEKI", "Dolphin", "Responsible"],
+      overview: "Some overview on May",
+      difficulty: "2/5",
+      video: "https://www.youtube.com/watch?v=BtEFRYIUF6o",
+      notablePlayers: ["IDK"],
+      color: "#FF8C00",
+    },
   ];
   let gameInfo = {
     mainInfo: "Guilty Gear Strive is ...",
@@ -57,7 +72,7 @@ export const GGSTContent = () => {
     publisher: "ArcSys",
     video: "video/sf6main",
     fontStyle: "ggstFont",
-    fontSize: "1.5em",
+    fontSize: "1.2em",
   };
 
   const [selectedChar, setSelectedChar] = useState<string>(""); // useState to store selected character

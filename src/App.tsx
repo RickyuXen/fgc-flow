@@ -6,7 +6,20 @@ import "@fontsource/exo/700.css";
 import "./App.css"; // Optional: for global styles
 
 function App() {
-  let gameList = ["Street Fighter 6", "Guilty Gear Strive", "2XKO", "..."];
+  let gameList = [
+    "Street Fighter 6",
+    "Guilty Gear Strive",
+    "2XKO",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+  ];
   const [selectedGame, setSelectedGame] = useState<string>(""); // selected game
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // selected game index
   const handleClearSection = () => {

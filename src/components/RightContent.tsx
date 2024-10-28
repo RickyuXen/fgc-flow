@@ -49,6 +49,7 @@ export const RightContent = (props: RightContentProps) => {
               <ReactPlayer
                 url={props.CharacterInfo.video}
                 controls={false}
+                loop
                 width="62.2224vh"
                 height="35vh"
                 playing
@@ -84,6 +85,7 @@ export const RightContent = (props: RightContentProps) => {
                 marginTop: "0vh",
                 color: `${props.CharacterInfo.color}`,
                 fontSize: "2.5em",
+                textTransform: "uppercase",
               }}
             >
               {props.CharacterInfo.name}
