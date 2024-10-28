@@ -45,7 +45,14 @@ export const RightContent = (props: RightContentProps) => {
               letterSpacing: "0.125vh",
             }}
           >
-            <div className="video-container">
+            <div
+              className="video-container"
+              style={{
+                borderColor: props.CharacterInfo.color
+                  ? props.CharacterInfo.color
+                  : "#555",
+              }}
+            >
               <ReactPlayer
                 url={props.CharacterInfo.video}
                 controls={false}

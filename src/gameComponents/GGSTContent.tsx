@@ -72,7 +72,7 @@ export const GGSTContent = () => {
     publisher: "ArcSys",
     video: "video/sf6main",
     fontStyle: "ggstFont",
-    fontSize: "1.2em",
+    fontSize: "1.2vw",
   };
 
   const [selectedChar, setSelectedChar] = useState<string>(""); // useState to store selected character

@@ -94,7 +94,7 @@ export const SF6Content = () => {
     publisher: "Capcom",
     video: "video/sf6main",
     fontStyle: "sf6Font",
-    fontSize: "1.2em",
+    fontSize: "1vw",
   };
 
   const [selectedChar, setSelectedChar] = useState<string>(""); // useState to store selected character
