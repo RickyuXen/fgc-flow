@@ -3,6 +3,7 @@ import { Characters } from "../components/Characters";
 import { RightContent } from "../components/RightContent";
 import { useState } from "react";
 import solImage from "../assets/GGST/SolBadguy.png";
+import kyImage from "../assets/GGST/KyKiske.png";
 
 interface CharacterInfo {
   name: string;
@@ -23,6 +24,11 @@ export const GGSTContent = () => {
       image: solImage,
       color: "#8b0000",
     },
+    {
+      name: "Ky Kiske",
+      image: kyImage,
+      color: "#318CE7",
+    },
   ];
   let characterInfos = [
     // all info about character, passed to right content
@@ -34,6 +40,15 @@ export const GGSTContent = () => {
       video: "https://www.youtube.com/watch?v=Jm0oh5RYTIE",
       notablePlayers: ["IDK"],
       color: "#8b0000",
+    },
+    {
+      name: "Ky Kiske",
+      tags: ["Shoto", "Neutral", "Corner-Carry", "RoboKy"],
+      overview: "Some overview on Ky Kiske",
+      difficulty: "1/5",
+      video: "https://www.youtube.com/watch?v=oWXpJ8wERMQ",
+      notablePlayers: ["IDK"],
+      color: "#318CE7",
     },
   ];
   let gameInfo = {
@@ -70,11 +85,14 @@ export const GGSTContent = () => {
       >
         <div
           className="column left"
-          style={{
-            borderColor: selectedCharInfo?.color || "#555",
-            fontSize: "3.5vh", // adjust values based on font
-            letterSpacing: "0vw",
-          }}
+          style={
+            {
+              borderColor: selectedCharInfo?.color || "#555",
+              fontSize: "3.5vh", // adjust values based on font
+              letterSpacing: "0vw",
+              "--active-color": selectedCharInfo?.color || "rgb(121, 238, 121)",
+            } as React.CSSProperties
+          }
         >
           <Characters
             characters={characters}
