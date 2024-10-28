@@ -29,7 +29,7 @@ const Sidebar = ({ gameTitle, selectedIndex, onSelectItem }: SidebarProps) => {
         style={{
           width: "80%",
           padding: "0.4vw",
-          marginLeft: "1vw",
+          marginLeft: "1.5vw",
           marginBottom: "-1vh",
           borderRadius: "16px",
           border: "1px solid #ccc",

@@ -18,7 +18,7 @@
   flex: 1;
   border-right: 0.37vh solid #555;
   border-left: 0.37vh solid #555;
-  height: 73vh;
+  height: 78vh;
   overflow-y: auto;
   overflow-x: hidden;
   direction: rtl;
@@ -103,4 +103,8 @@
   border-top: 0.741vh solid #555;
   border-bottom: 0.741vh solid #555;
   border-radius: 1.481vh;
+}
+
+.links{
+  margin-bottom: -5vh;
 }

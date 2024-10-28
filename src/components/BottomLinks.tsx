@@ -1,3 +1,5 @@
+import "./gameContent.css";
+
 export const BottomLinks = () => {
   return (
     <div className="links">
