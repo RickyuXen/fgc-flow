@@ -1,8 +1,8 @@
 import React from "react";
 import BottomLinks from "./BottomLinks";
-import { SF6Content } from "./SF6Content";
-import { GGSTContent } from "./GGSTContent";
-import { TxkoContent } from "./TxkoContent";
+import { SF6Content } from "../gameComponents/SF6Content";
+import { GGSTContent } from "../gameComponents/GGSTContent";
+import { TxkoContent } from "../gameComponents/TxkoContent";
 
 interface SectionProps {
   title: string;

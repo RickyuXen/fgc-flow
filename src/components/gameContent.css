@@ -73,7 +73,7 @@
 
 .characters-list li.active{
   background-color: #555;
-  color: rgb(121, 238, 121);
+  color: var(--active-color, rgb(121, 238, 121));
   font-weight: bold;
   border-radius: 1.481vh;
 }
@@ -90,11 +90,8 @@
 }
 
 .nameTag{
-  font-family: 'Exo', sans-serif;
-  font-size: 2.222vh;
   font-weight: 600;
   border-radius: 1.481vh;
-  letter-spacing: 0.148vh;
   padding: 0.741vh 1.481vh;
   display: flex;
   white-space: nowrap;

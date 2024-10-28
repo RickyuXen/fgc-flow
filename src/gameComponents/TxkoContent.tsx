@@ -1,95 +1,49 @@
-import "./gameContent.css";
-import { Characters } from "./Characters";
+import "../components/gameContent.css";
+import { Characters } from "../components/Characters";
 import { useState } from "react";
-import ryuImage from "../assets/SF6/ryu.png";
+import ekkoImage from "../assets/2XKO/ekko.png";
 import kenImage from "../assets/SF6/ken.png";
 import kimImage from "../assets/SF6/kimberly.png";
 import solImage from "../assets/GGST/SolBadguy.png";
-import { RightContent } from "./RightContent";
+import { RightContent } from "../components/RightContent";
 
 interface CharacterInfo {
   name: string;
   tags: string[];
   overview: string;
-  resources?: string[];
   difficulty: string;
   video: string;
   notablePlayers: string[];
   color: string;
 }
 
-export const SF6Content = () => {
+export const TxkoContent = () => {
   // Characters in the game and images
   let characters = [
     // characters for selection
     {
-      name: "Ryu",
-      image: ryuImage,
-    },
-    {
-      name: "Ken",
-      image: kenImage,
-    },
-    {
-      name: "Kimberly",
-      image: kimImage,
-    },
-    {
-      name: "Kimberly",
-      image: kimImage,
-    },
-    {
-      name: "Kimberly",
-      image: kimImage,
-    },
-    {
-      name: "Kimberly",
-      image: kimImage,
-    },
-    {
-      name: "Kimberly",
-      image: kimImage,
+      name: "Ekko",
+      image: ekkoImage,
     },
   ];
   let characterInfos = [
     // all info about character, passed to right content; maybe add border colour to dynamically change that
     {
-      name: "Ryu",
-      tags: ["Shoto", "Neutral", "Corner-Carry", "Beard"],
-      overview: `Ryu retains his iconic moves, including the Hadouken (fireball), 
-      Shoryuken (uppercut), and Tatsumaki Senpukyaku (hurricane kick). 
-      These moves allow for effective zoning, anti-air options, and combo potential.`,
+      name: "Ekko",
+      tags: ["Setplay", "Neutral", "Corner-Carry", "Beard"],
+      overview: "Some overview on Ekko",
       difficulty: "2/5",
-      video: "https://www.youtube.com/watch?v=-9MB38W2Gfw",
+      video: "https://www.youtube.com/watch?v=7u0-LtgJM5U",
       notablePlayers: ["Paladin"],
-      resources: ["https://www.streetfighter.com/6/character/ryu"],
       color: "#555",
-    },
-    {
-      name: "Ken",
-      tags: ["Shoto", "Neutral", "Corner-Carry", "Feet"],
-      overview: "Some overview on Ken",
-      difficulty: "3/5",
-      video: "https://www.youtube.com/watch?v=gip4mso1h70",
-      notablePlayers: ["Daigo"],
-      color: "red",
-    },
-    {
-      name: "Kimberly",
-      tags: ["Shoto", "Neutral", "Corner-Carry", "Feet"],
-      overview: "Some overview on Ken",
-      difficulty: "4/5",
-      video: "https://www.youtube.com/watch?v=A0q2oXL0G74",
-      notablePlayers: ["Diaphone"],
-      color: "#AA336A",
     },
   ];
   let gameInfo = {
-    mainInfo: "Street Fighter 6 is ...",
-    datePublished: "2023",
-    publisher: "Capcom",
+    mainInfo: "2XKO is ...",
+    datePublished: "2025",
+    publisher: "Riot Games",
     video: "video/sf6main",
-    fontStyle: "sf6Font",
+    fontStyle: "blackHan",
     fontSize: "1.5em",
   };
 
@@ -109,10 +63,19 @@ export const SF6Content = () => {
 
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        style={{
+          textShadow: `-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000`, // text shadow for hard to read font
+        }}
+      >
         <div
           className="column left"
-          style={{ borderColor: selectedCharInfo?.color || "#555" }}
+          style={{
+            borderColor: selectedCharInfo?.color || "#555",
+            fontSize: "3.5vh", // adjust values based on font
+            letterSpacing: "0vw",
+          }}
         >
           <Characters
             characters={characters}

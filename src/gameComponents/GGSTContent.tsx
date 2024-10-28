@@ -1,6 +1,6 @@
-import "./gameContent.css";
-import { Characters } from "./Characters";
-import { RightContent } from "./RightContent";
+import "../components/gameContent.css";
+import { Characters } from "../components/Characters";
+import { RightContent } from "../components/RightContent";
 import { useState } from "react";
 import solImage from "../assets/GGST/SolBadguy.png";
 
@@ -8,9 +8,11 @@ interface CharacterInfo {
   name: string;
   tags: string[];
   overview: string;
+  resources?: string[];
   difficulty: string;
   video: string;
   notablePlayers: string[];
+  color: string;
 }
 
 export const GGSTContent = () => {
@@ -19,17 +21,19 @@ export const GGSTContent = () => {
     {
       name: "Sol Badguy",
       image: solImage,
+      color: "#8b0000",
     },
   ];
   let characterInfos = [
     // all info about character, passed to right content
     {
       name: "Sol Badguy",
-      tags: ["Shoto", "Neutral", "Corner-Carry", "Beard"],
-      overview: "Some overview on Ryu",
+      tags: ["Shoto", "Neutral", "Corner-Carry", "Bol Sadguy"],
+      overview: "Some overview on SOL BADGUY",
       difficulty: "2/5",
       video: "https://www.youtube.com/watch?v=Jm0oh5RYTIE",
-      notablePlayers: ["Paladin"],
+      notablePlayers: ["IDK"],
+      color: "#8b0000",
     },
   ];
   let gameInfo = {
@@ -57,15 +61,31 @@ export const GGSTContent = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="column left">
+      <div
+        className="container"
+        style={{
+          fontFamily: `${gameInfo.fontStyle}, sans-serif`,
+          textShadow: `-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000`, // text shadow for hard to read fonts
+        }}
+      >
+        <div
+          className="column left"
+          style={{
+            borderColor: selectedCharInfo?.color || "#555",
+            fontSize: "3.5vh", // adjust values based on font
+            letterSpacing: "0vw",
+          }}
+        >
           <Characters
             characters={characters}
             selectedCharacter={selectedIndex}
             onSelectChar={handleSelectChar}
           />
         </div>
-        <div className="column right">
+        <div
+          className="column right"
+          style={{ borderColor: selectedCharInfo?.color || "#555" }}
+        >
           <RightContent
             key={selectedCharInfo ? selectedCharInfo.name : "game-info"}
             CharacterInfo={selectedCharInfo}

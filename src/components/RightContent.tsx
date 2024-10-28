@@ -10,6 +10,7 @@ interface CharacterInfo {
   resources?: string[];
   difficulty: string;
   video: string;
+  color?: string;
   notablePlayers: string[];
 }
 
@@ -76,7 +77,17 @@ export const RightContent = (props: RightContentProps) => {
               letterSpacing: "0.125vh",
             }}
           >
-            <h2 style={{ textAlign: "center" }}>{props.CharacterInfo.name}</h2>
+            <h2
+              style={{
+                textAlign: "center",
+                marginBottom: "0vh",
+                marginTop: "0vh",
+                color: `${props.CharacterInfo.color}`,
+                fontSize: "2.5em",
+              }}
+            >
+              {props.CharacterInfo.name}
+            </h2>
             <p>Overview: {props.CharacterInfo.overview}</p>
             <p>Difficulty: {props.CharacterInfo.difficulty}</p>
             <p>
