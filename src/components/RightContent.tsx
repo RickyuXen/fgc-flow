@@ -133,11 +133,17 @@ export const RightContent = (props: RightContentProps) => {
                 </div>
               </div>
               <div
-                className="reources-under-video"
+                className="resources-under-video"
                 style={{ borderColor: props.CharacterInfo?.color || "#555" }}
               >
-                <p style={{ marginBottom: "0vh" }}>
-                  {props.CharacterInfo.name} Resources:
+                <p
+                  style={{
+                    marginBottom: "1.4vh",
+                    fontSize: "1.5vw",
+                    marginTop: "1.2vh",
+                  }}
+                >
+                  {props.CharacterInfo.name} Resources :
                 </p>
                 <ul className="resource-links">{createResourceLinks()}</ul>
               </div>

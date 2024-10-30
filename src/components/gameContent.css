@@ -130,16 +130,33 @@
   justify-content: center;
 }
 
-.reources-under-video{
+.resources-under-video{
   margin-top: 3vh;
   border-top: 0.37vh solid #555;
   border-radius: 10%;
   height: 19vh;
+  overflow: auto;
 }
 
 .resource-links{
   list-style: none;
-  display: inline;
+  padding: 0; 
+  margin: 0; 
+  display: block;
+  overflow: hidden;
+}
+
+.resource-links li {
+  display: inline-block;
+  padding: 1.7vh 0.7vw 1.7vh 0.7vw;
+}
+
+.resource-links a{
+  text-decoration: none;
+  color: inherit;
+  border-radius: 50%;
+  font-size: 2vh;
+  padding: 0.7vw 0.7vw 0.7vw 0.7vw;
 }
 
 button {
