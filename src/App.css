@@ -21,7 +21,7 @@ body {
 }
 
 .sidebar h2 {
-  font-size: 2.4vh; /* 18px converted to vh */
+  font-size: 2.4vh;
   font-weight: bold;
   text-align: center;
   text-decoration: underline;

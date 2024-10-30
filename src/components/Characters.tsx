@@ -4,7 +4,6 @@ interface CharacterProps {
   characters: {
     name: string;
     image: string;
-    color?: string;
   }[];
   selectedCharacter: number | null;
   onSelectChar: (character: string, index: number) => void;

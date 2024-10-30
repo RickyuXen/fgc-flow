@@ -2,9 +2,6 @@ import "../components/gameContent.css";
 import { Characters } from "../components/Characters";
 import { useState } from "react";
 import ekkoImage from "../assets/2XKO/ekko.png";
-import kenImage from "../assets/SF6/ken.png";
-import kimImage from "../assets/SF6/kimberly.png";
-import solImage from "../assets/GGST/SolBadguy.png";
 import { RightContent } from "../components/RightContent";
 
 interface CharacterInfo {
@@ -39,15 +36,15 @@ export const TxkoContent = () => {
     },
   ];
   let gameInfo = {
+    title: "2XKO",
     mainInfo: "2XKO is ...",
     datePublished: "2025",
     publisher: "Riot Games",
     video: "video/sf6main",
     fontStyle: "blackHan",
-    fontSize: "1.5em",
+    fontSize: "1vw",
   };
 
-  const [selectedChar, setSelectedChar] = useState<string>(""); // useState to store selected character
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // useState to store index
   const [selectedCharInfo, setSelectedCharInfo] = // useState to store selected character and character info
     useState<CharacterInfo | null>(null);
@@ -56,11 +53,13 @@ export const TxkoContent = () => {
     const foundCharInfo = characterInfos.find(
       (char) => char.name === characterName
     );
-    setSelectedChar(characterName);
     setSelectedIndex(index);
     setSelectedCharInfo(foundCharInfo || null);
   };
-
+  const handleClearChar = () => {
+    setSelectedCharInfo(null);
+    setSelectedIndex(-1);
+  };
   return (
     <>
       <div
@@ -91,6 +90,7 @@ export const TxkoContent = () => {
             key={selectedCharInfo ? selectedCharInfo.name : "game-info"}
             CharacterInfo={selectedCharInfo}
             GameInfo={gameInfo}
+            clearCharacterInfo={handleClearChar}
           />
         </div>
       </div>

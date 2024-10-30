@@ -27,9 +27,14 @@ function App() {
     setSelectedIndex(null);
   };
   const handleSelectItem = (item: string, index: number) => {
-    console.log(item);
-    setSelectedGame(item);
-    setSelectedIndex(index);
+    if (selectedGame === item) {
+      // have characters.info be set to null inside game components
+      console.log("You've selected the same game");
+    } else {
+      console.log(item);
+      setSelectedGame(item);
+      setSelectedIndex(index);
+    }
   };
 
   return (

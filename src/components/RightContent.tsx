@@ -1,7 +1,8 @@
 import "./gameContent.css";
 import "../fonts.css";
-import { motion, AnimatePresence, color } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import ReactPlayer from "react-player";
+import oneStar from "../assets/stars/oneStar.png";
 
 interface CharacterInfo {
   name: string;
@@ -15,9 +16,11 @@ interface CharacterInfo {
 }
 
 interface GameInfo {
+  title: string;
   mainInfo: string;
   datePublished: string;
   publisher: string;
+  video: string;
   fontStyle?: string;
   fontSize?: string;
 }
@@ -25,9 +28,49 @@ interface GameInfo {
 interface RightContentProps {
   CharacterInfo: CharacterInfo | null;
   GameInfo: GameInfo;
+  clearCharacterInfo?: () => void;
 }
 
 export const RightContent = (props: RightContentProps) => {
+  // Function to create resources link with just the website name
+  const createResourceLinks = () => {
+    return props.CharacterInfo?.resources?.map((link, index) => {
+      // Clean up the display text by removing "https://www.", "wiki.", and anything after ".com" or ".gg"
+      const displayText = link
+        .replace(/^https?:\/\/(www\.)?/, "")
+        .replace(/^wiki\./, "")
+        .replace(/\.com.*$/, "")
+        .replace(/\.gg.*$/, "");
+
+      return (
+        <li key={index}>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            {displayText}
+          </a>
+        </li>
+      );
+    });
+  };
+  // obtain star image, create array of star image
+  const renderStars = () => {
+    const difficulty = props.CharacterInfo?.difficulty || "0/5";
+    const starCount = parseInt(difficulty[0], 10);
+
+    return Array(starCount)
+      .fill(null)
+      .map((_, index) => (
+        <img
+          key={index}
+          src={oneStar}
+          alt={`star-${index + 1}`}
+          style={{
+            width: "9.6vh",
+            height: "9.1vh",
+            marginRight: "0.5vh",
+          }}
+        />
+      ));
+  };
   return (
     <AnimatePresence>
       {props.CharacterInfo ? (
@@ -45,29 +88,58 @@ export const RightContent = (props: RightContentProps) => {
               letterSpacing: "0.125vh",
             }}
           >
-            <div
-              className="video-container"
-              style={{
-                borderColor: props.CharacterInfo.color
-                  ? props.CharacterInfo.color
-                  : "#555",
-              }}
-            >
+            <div className="video-container">
               <ReactPlayer
                 url={props.CharacterInfo.video}
                 controls={false}
                 loop
-                width="62.2224vh"
-                height="35vh"
+                width="62.5vh"
+                height="35.1vh"
                 playing
+                style={{
+                  borderRight: "0.741vh solid #555",
+                  borderLeft: "0.741vh solid #555",
+                  borderTop: "0.741vh solid #555",
+                  borderBottom: "0.741vh solid #555",
+                  borderRadius: "1.481vh",
+                  borderColor: props.CharacterInfo.color
+                    ? props.CharacterInfo.color
+                    : "#555",
+                }}
               />
             </div>
             <div className="values-under-video">
               <div className="tags-under-video">
-                {props.CharacterInfo.tags.join(", ")}
+                {props.CharacterInfo.tags.map((tags) => {
+                  return (
+                    <li
+                      className="listTags"
+                      style={
+                        {
+                          "--active-color":
+                            props.CharacterInfo?.color || "rgb(121, 238, 121)",
+                        } as React.CSSProperties
+                      }
+                    >
+                      {tags}
+                    </li>
+                  );
+                })}
               </div>
               <div className="difficulty-under-video">
-                {props.CharacterInfo.difficulty}
+                <div style={{ marginBottom: "1vh" }}>Difficulty:</div>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  {renderStars()}
+                </div>
+              </div>
+              <div
+                className="reources-under-video"
+                style={{ borderColor: props.CharacterInfo?.color || "#555" }}
+              >
+                <p style={{ marginBottom: "0vh" }}>
+                  {props.CharacterInfo.name} Resources:
+                </p>
+                <ul className="resource-links">{createResourceLinks()}</ul>
               </div>
             </div>
           </motion.div>
@@ -102,12 +174,32 @@ export const RightContent = (props: RightContentProps) => {
             <p>
               Notable Players: {props.CharacterInfo.notablePlayers.join(", ")}
             </p>
-            <p>{props.CharacterInfo.resources}</p>
+            <button onClick={props.clearCharacterInfo}>
+              Back to {props.GameInfo.title}
+            </button>
           </motion.div>
         </>
       ) : (
         <motion.div>
-          <p>{props.GameInfo.mainInfo}</p>
+          <ReactPlayer
+            url={props.GameInfo.video}
+            controls={false}
+            loop
+            width="58.025vw"
+            height="63vh"
+            playing
+            style={{
+              borderRight: "0.741vh solid #555",
+              borderLeft: "0.741vh solid #555",
+              borderTop: "0.741vh solid #555",
+              borderBottom: "0.741vh solid #555",
+              borderRadius: "1.481vh",
+              marginLeft: "1vw",
+            }}
+          />
+          <div className="game-mainpage">
+            <p>{props.GameInfo.mainInfo}</p>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

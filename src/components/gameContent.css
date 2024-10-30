@@ -40,6 +40,11 @@
   position: relative;
 }
 
+.game-mainpage{
+  height: 12vh;
+  text-align: center;
+}
+
 .video-content{
   flex: 1;
   padding-right: 2vw;
@@ -97,14 +102,66 @@
   white-space: nowrap;
 }
 
-.video-container{
-  border-right: 0.741vh solid #555;
-  border-left: 0.741vh solid #555;
-  border-top: 0.741vh solid #555;
-  border-bottom: 0.741vh solid #555;
-  border-radius: 1.481vh;
-}
-
 .links{
   margin-bottom: -5vh;
+}
+
+.tags-under-video{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.listTags{
+  list-style-type: none;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  margin-left: .2vw;
+  margin-right: .2vw;
+  display: inline;
+  transition: all 0.3s ease;
+  border-radius: 1vw;
+  background-color: var(--active-color, rgb(121, 238, 121));
+}
+
+.difficulty-under-video{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reources-under-video{
+  margin-top: 3vh;
+  border-top: 0.37vh solid #555;
+  border-radius: 10%;
+  height: 19vh;
+}
+
+.resource-links{
+  list-style: none;
+  display: inline;
+}
+
+button {
+  background-color: #555; 
+  color: #eee; 
+  border: 0.2vh solid #777;
+  padding: 1.5vh 3vw; 
+  font-size: 1.8vh;
+  border-radius: 0.8vh; 
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 0.5vh 0.8vh rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #666; 
+  color: #fff; 
+  border-color: #888; 
+  transform: scale(1.05); 
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0.5vh #aaa;
 }

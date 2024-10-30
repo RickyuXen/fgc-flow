@@ -42,7 +42,7 @@ export const GGSTContent = () => {
       name: "Sol Badguy",
       tags: ["Shoto", "Neutral", "Corner-Carry", "Bol Sadguy"],
       overview: "Some overview on SOL BADGUY",
-      difficulty: "2/5",
+      difficulty: "2",
       video: "https://www.youtube.com/watch?v=Jm0oh5RYTIE",
       notablePlayers: ["IDK"],
       color: "#8b0000",
@@ -51,7 +51,7 @@ export const GGSTContent = () => {
       name: "Ky Kiske",
       tags: ["Shoto", "Neutral", "Corner-Carry", "RoboKy"],
       overview: "Some overview on Ky Kiske",
-      difficulty: "1/5",
+      difficulty: "1",
       video: "https://www.youtube.com/watch?v=oWXpJ8wERMQ",
       notablePlayers: ["IDK"],
       color: "#318CE7",
@@ -60,22 +60,22 @@ export const GGSTContent = () => {
       name: "May",
       tags: ["Charge", "TOTSUGEKI", "Dolphin", "Responsible"],
       overview: "Some overview on May",
-      difficulty: "2/5",
+      difficulty: "2",
       video: "https://www.youtube.com/watch?v=BtEFRYIUF6o",
       notablePlayers: ["IDK"],
       color: "#FF8C00",
     },
   ];
   let gameInfo = {
+    title: "Guilty Gear Strive",
     mainInfo: "Guilty Gear Strive is ...",
     datePublished: "2021",
     publisher: "ArcSys",
     video: "video/sf6main",
     fontStyle: "ggstFont",
-    fontSize: "1.2vw",
+    fontSize: "1vw",
   };
 
-  const [selectedChar, setSelectedChar] = useState<string>(""); // useState to store selected character
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // useState to store index
   const [selectedCharInfo, setSelectedCharInfo] = // useState to store selected character and character info
     useState<CharacterInfo | null>(null);
@@ -84,11 +84,13 @@ export const GGSTContent = () => {
     const foundCharInfo = characterInfos.find(
       (char) => char.name === characterName
     );
-    setSelectedChar(characterName);
     setSelectedIndex(index);
     setSelectedCharInfo(foundCharInfo || null);
   };
-
+  const handleClearChar = () => {
+    setSelectedCharInfo(null);
+    setSelectedIndex(-1);
+  };
   return (
     <>
       <div
@@ -123,6 +125,7 @@ export const GGSTContent = () => {
             key={selectedCharInfo ? selectedCharInfo.name : "game-info"}
             CharacterInfo={selectedCharInfo}
             GameInfo={gameInfo}
+            clearCharacterInfo={handleClearChar}
           />
         </div>
       </div>
