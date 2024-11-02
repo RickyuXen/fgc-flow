@@ -1,13 +1,18 @@
 import "../components/gameContent.css";
 import { Characters } from "../components/Characters";
-import { useState } from "react";
-import ekkoImage from "../assets/2XKO/ekko.png";
 import { RightContent } from "../components/RightContent";
+import { useState } from "react";
+// import all character splash images (for selecting characters)
+import lukeImage from "../assets/SF6/luke.png";
+// import game and characterinfo json files ; do not change variables, if there is a fontstyle, have to add to fonts.css
+import CharacterInfos from "../data/sf6CharactersInfo.json";
+import gameInfo from "../data/sf6gameinfo.json";
 
 interface CharacterInfo {
   name: string;
   tags: string[];
   overview: string;
+  resources?: string[];
   difficulty: string;
   video: string;
   notablePlayers: string[];
@@ -15,44 +20,23 @@ interface CharacterInfo {
   pros?: string[];
   cons?: string[];
 }
-
-export const TxkoContent = () => {
-  // Characters in the game and images
+// name should be the same as file without '.tsx'
+export const gameContent = () => {
+  // Characters in the game and images for character selection; headache to use this in JSON file
   let characters = [
-    // characters for selection
+    // Values used in left-character selection image should be a reference from imported image
     {
-      name: "Ekko",
-      image: ekkoImage,
+      name: "Ryu",
+      image: lukeImage,
     },
   ];
-  let characterInfos = [
-    // all info about character, passed to right content; maybe add border colour to dynamically change that
-    {
-      name: "Ekko",
-      tags: ["Setplay", "Neutral", "Corner-Carry", "Beard"],
-      overview: "Some overview on Ekko",
-      difficulty: "2/5",
-      video: "https://www.youtube.com/watch?v=7u0-LtgJM5U",
-      notablePlayers: ["Paladin"],
-      color: "#555",
-    },
-  ];
-  let gameInfo = {
-    title: "2XKO",
-    mainInfo: "2XKO is ...",
-    datePublished: "2025",
-    publisher: "Riot Games",
-    video: "video/sf6main",
-    fontStyle: "blackHan",
-    fontSize: "1vw",
-  };
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // useState to store index
   const [selectedCharInfo, setSelectedCharInfo] = // useState to store selected character and character info
     useState<CharacterInfo | null>(null);
   const handleSelectChar = (characterName: string, index: number) => {
     console.log(characterName);
-    const foundCharInfo = characterInfos.find(
+    const foundCharInfo = CharacterInfos.find(
       (char) => char.name === characterName
     );
     setSelectedIndex(index);
@@ -62,21 +46,27 @@ export const TxkoContent = () => {
     setSelectedCharInfo(null);
     setSelectedIndex(-1);
   };
+
   return (
     <>
       <div
         className="container"
         style={{
-          textShadow: `-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000`, // text shadow for hard to read font
+          fontFamily: `${gameInfo.fontStyle}, sans-serif`,
+          textShadow: `-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000`, // text shadow for fonts to be more readable
         }}
       >
         <div
           className="column left"
-          style={{
-            borderColor: selectedCharInfo?.color || "#555",
-            fontSize: "3.5vh", // adjust values based on font
-            letterSpacing: "0vw",
-          }}
+          style={
+            {
+              borderColor: selectedCharInfo?.color || "#555",
+              fontSize: "3.5vh", // adjust values based on font
+              letterSpacing: "0vw",
+              textTransform: "uppercase",
+              "--active-color": selectedCharInfo?.color || "rgb(121, 238, 121)",
+            } as React.CSSProperties
+          }
         >
           <Characters
             characters={characters}
@@ -100,4 +90,4 @@ export const TxkoContent = () => {
   );
 };
 
-// need to be able to separate left and right content; left content should be scrollable and right content should be static
+// After importing all information, add reference and string to switch statement in Section.tsx

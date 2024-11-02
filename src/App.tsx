@@ -22,6 +22,7 @@ function App() {
   ];
   const [selectedGame, setSelectedGame] = useState<string>(""); // selected game
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // selected game index
+  const [isSidebarOpen, setSideBar] = useState<boolean>(false);
   const handleClearSection = () => {
     setSelectedGame("");
     setSelectedIndex(null);
@@ -36,13 +37,22 @@ function App() {
       setSelectedIndex(index);
     }
   };
+  const toggleSidebar = () => {
+    setSideBar(!isSidebarOpen);
+  };
 
   return (
     <div className="App">
+      {/* Hamburger Button for Mobile */}
+      <button className="hamburger" onClick={toggleSidebar}>
+        &#9776; {/* Unicode for hamburger icon */}
+      </button>
+      {/* Sidebar: Conditional rendering based on isSidebarOpen state */}
       <Sidebar
         gameTitle={gameList}
         onSelectItem={handleSelectItem}
         selectedIndex={selectedIndex}
+        isOpen={isSidebarOpen} // Pass isOpen to the Sidebar
       />
       <MainContent
         selectedGame={selectedGame}
@@ -54,4 +64,7 @@ function App() {
 
 export default App;
 
-// find out and figure out how to make nameTag text center on the right side of li justify right + justify center? idk
+// add logo to main game screen
+// add personal logo to site
+// change pros and cons to a list and have that list be generated
+// remove excess code/content

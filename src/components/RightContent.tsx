@@ -13,6 +13,8 @@ interface CharacterInfo {
   video: string;
   color?: string;
   notablePlayers: string[];
+  pros?: string[];
+  cons?: string[];
 }
 
 interface GameInfo {
@@ -23,6 +25,7 @@ interface GameInfo {
   video: string;
   fontStyle?: string;
   fontSize?: string;
+  fontSizeRight?: string;
 }
 
 interface RightContentProps {
@@ -32,6 +35,7 @@ interface RightContentProps {
 }
 
 export const RightContent = (props: RightContentProps) => {
+  const isMobile = window.innerWidth <= 700; // if on mobile, set different sizes
   // Function to create resources link with just the website name
   const createResourceLinks = () => {
     return props.CharacterInfo?.resources?.map((link, index) => {
@@ -40,7 +44,8 @@ export const RightContent = (props: RightContentProps) => {
         .replace(/^https?:\/\/(www\.)?/, "")
         .replace(/^wiki\./, "")
         .replace(/\.com.*$/, "")
-        .replace(/\.gg.*$/, "");
+        .replace(/\.gg.*$/, "")
+        .replace(/\.app.*$/, "");
 
       return (
         <li key={index}>
@@ -64,8 +69,8 @@ export const RightContent = (props: RightContentProps) => {
           src={oneStar}
           alt={`star-${index + 1}`}
           style={{
-            width: "9.6vh",
-            height: "9.1vh",
+            width: isMobile ? "3.2vh" : "9.6vh",
+            height: isMobile ? "3.033vh" : "9.1vh",
             marginRight: "0.5vh",
           }}
         />
@@ -93,8 +98,8 @@ export const RightContent = (props: RightContentProps) => {
                 url={props.CharacterInfo.video}
                 controls={false}
                 loop
-                width="62.5vh"
-                height="35.1vh"
+                width={isMobile ? "34vh" : "62.5vh"}
+                height={isMobile ? "20vh" : "35.1vh"}
                 playing
                 style={{
                   borderRight: "0.741vh solid #555",
@@ -109,46 +114,77 @@ export const RightContent = (props: RightContentProps) => {
               />
             </div>
             <div className="values-under-video">
-              <div className="tags-under-video">
-                {props.CharacterInfo.tags.map((tags) => {
-                  return (
-                    <li
-                      className="listTags"
-                      style={
-                        {
-                          "--active-color":
-                            props.CharacterInfo?.color || "rgb(121, 238, 121)",
-                        } as React.CSSProperties
-                      }
-                    >
-                      {tags}
-                    </li>
-                  );
-                })}
-              </div>
-              <div className="difficulty-under-video">
-                <div style={{ marginBottom: "1vh" }}>Difficulty:</div>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  {renderStars()}
-                </div>
-              </div>
-              <div
-                className="resources-under-video"
-                style={{ borderColor: props.CharacterInfo?.color || "#555" }}
+              <motion.div
+                key={"video-content"}
+                initial={{ opacity: 0, x: -200 }} // Start off-screen to the left
+                animate={{ opacity: 1, x: 0 }} // Animate to fully visible position
+                exit={{ opacity: 0, x: -200 }} // Exit to the left
+                transition={{ duration: 1, ease: "easeInOut" }}
               >
-                <p
-                  style={{
-                    marginBottom: "1.4vh",
-                    fontSize: "1.5vw",
-                    marginTop: "1.2vh",
-                  }}
+                <div className="tags-under-video">
+                  {props.CharacterInfo.tags.map((tags) => {
+                    return (
+                      <li
+                        className="listTags"
+                        style={
+                          {
+                            "--active-color":
+                              props.CharacterInfo?.color ||
+                              "rgb(121, 238, 121)",
+                          } as React.CSSProperties
+                        }
+                      >
+                        {tags}
+                      </li>
+                    );
+                  })}
+                </div>
+              </motion.div>
+              <motion.div
+                key={"video-content"}
+                initial={{ opacity: 0, x: -200 }} // Start off-screen to the left
+                animate={{ opacity: 1, x: 0 }} // Animate to fully visible position
+                exit={{ opacity: 0, x: -200 }} // Exit to the left
+                transition={{ duration: 1.25, ease: "easeInOut" }}
+              >
+                <div className="difficulty-under-video">
+                  <div style={{ marginBottom: "1vh" }}>Difficulty to Use:</div>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    {renderStars()}
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                key={"video-content"}
+                initial={{ opacity: 0, x: -200 }} // Start off-screen to the left
+                animate={{ opacity: 1, x: 0 }} // Animate to fully visible position
+                exit={{ opacity: 0, x: -200 }} // Exit to the left
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+              >
+                <div
+                  className="resources-under-video"
+                  style={{ borderColor: props.CharacterInfo?.color || "#555" }}
                 >
-                  {props.CharacterInfo.name} Resources :
-                </p>
-                <ul className="resource-links">{createResourceLinks()}</ul>
-              </div>
+                  <p className="character-resource-label">
+                    {props.CharacterInfo.name} Resources :
+                  </p>
+                  <ul
+                    className="resource-links"
+                    style={
+                      {
+                        "--active-color":
+                          props.CharacterInfo?.color || "rgb(121, 238, 121)",
+                      } as any
+                    }
+                  >
+                    {createResourceLinks()}
+                  </ul>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
+
+          {/* Separation of left and right here */}
 
           <motion.div
             key="character-info"
@@ -156,7 +192,7 @@ export const RightContent = (props: RightContentProps) => {
             animate={{ opacity: 1, x: 0 }} // Animate to fully visible position
             exit={{ opacity: 0, x: 200 }} // Exit to the right
             transition={{ duration: 0.75, ease: "easeInOut" }}
-            className="characters-information" // Apply CSS class
+            className="characters-information"
             style={{
               fontFamily: `${props.GameInfo.fontStyle}, sans-serif`,
               fontSize: `${props.GameInfo.fontSize}`,
@@ -169,44 +205,82 @@ export const RightContent = (props: RightContentProps) => {
                 marginBottom: "0vh",
                 marginTop: "0vh",
                 color: `${props.CharacterInfo.color}`,
-                fontSize: "2.5em",
+                fontSize: isMobile ? "7em" : "3.5em",
                 textTransform: "uppercase",
               }}
             >
               {props.CharacterInfo.name}
             </h2>
-            <p>Overview: {props.CharacterInfo.overview}</p>
-            <p>Difficulty: {props.CharacterInfo.difficulty}</p>
-            <p>
-              Notable Players: {props.CharacterInfo.notablePlayers.join(", ")}
-            </p>
-            <button onClick={props.clearCharacterInfo}>
-              Back to {props.GameInfo.title}
-            </button>
+            <div
+              className="characters-overviews"
+              style={{ fontSize: props.GameInfo.fontSizeRight }}
+            >
+              <h3 style={{ textAlign: "center" }}>Overview</h3>
+              <p>{props.CharacterInfo.overview}</p>
+              <p>Notable Players:</p>
+              {props.CharacterInfo.notablePlayers?.map((players) => {
+                return <li>{players}</li>;
+              })}
+              <div className="character-pros">
+                <h3>Pros</h3>
+                {props.CharacterInfo.pros?.map((pros) => {
+                  return <li>{pros}</li>;
+                })}
+              </div>
+              <div className="character-cons">
+                <h3>Cons</h3>
+                {props.CharacterInfo.cons?.map((cons) => {
+                  return <li>{cons}</li>;
+                })}
+              </div>
+            </div>
+
+            <div>
+              <button onClick={props.clearCharacterInfo}>
+                Back to {props.GameInfo.title}
+              </button>
+            </div>
           </motion.div>
         </>
       ) : (
-        <motion.div>
-          <ReactPlayer
-            url={props.GameInfo.video}
-            controls={false}
-            loop
-            width="58.025vw"
-            height="63vh"
-            playing
-            style={{
-              borderRight: "0.741vh solid #555",
-              borderLeft: "0.741vh solid #555",
-              borderTop: "0.741vh solid #555",
-              borderBottom: "0.741vh solid #555",
-              borderRadius: "1.481vh",
-              marginLeft: "1vw",
-            }}
-          />
-          <div className="game-mainpage">
-            <p>{props.GameInfo.mainInfo}</p>
-          </div>
-        </motion.div>
+        <>
+          <motion.div
+            key="game-video-main"
+            initial={{ opacity: 0, y: -200 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 200 }}
+            transition={{ duration: 0.75, ease: "easeInOut" }}
+          >
+            <ReactPlayer
+              className="character-video"
+              url={props.GameInfo.video}
+              controls={false}
+              loop
+              width={isMobile ? "80vw" : "58.025vw"}
+              height={isMobile ? "25vh" : "63vh"}
+              playing
+              style={{
+                borderRight: "0.741vh solid #555",
+                borderLeft: "0.741vh solid #555",
+                borderTop: "0.741vh solid #555",
+                borderBottom: "0.741vh solid #555",
+                borderRadius: "1.481vh",
+                borderColor: "#555",
+              }}
+            />
+            <motion.div
+              key="game-mainpage"
+              initial={{ opacity: 0, y: 400 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 200 }}
+              transition={{ duration: 0.75, ease: "easeInOut" }}
+            >
+              <div className="game-mainpage">
+                <p>{props.GameInfo.mainInfo}</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </>
       )}
     </AnimatePresence>
   );

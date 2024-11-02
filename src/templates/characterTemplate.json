@@ -1,0 +1,27 @@
+[
+    {
+      "name": "char1",
+      "tags": ["", "", "", ""],
+      "overview": "",
+      "difficulty": "1",
+      "video": "",
+      "notablePlayers": ["", ""],
+      "resources": ["", "", "", "", "https://www.test.com"],
+      "color": "",
+      "pros": ["", ""],
+      "cons": ["", ""]
+    },
+    {
+        "name": "char2",
+        "tags": ["", "", "", ""],
+        "overview": "",
+        "difficulty": "5",
+        "video": "",
+        "notablePlayers": ["", ""],
+        "resources": ["", "", "", "", "https://www.test.com"],
+        "color": "",
+        "pros": ["", ""],
+        "cons": ["", ""]
+      }
+  ]
+  

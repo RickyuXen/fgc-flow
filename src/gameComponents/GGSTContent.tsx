@@ -15,6 +15,8 @@ interface CharacterInfo {
   video: string;
   notablePlayers: string[];
   color: string;
+  pros?: string[];
+  cons?: string[];
 }
 
 export const GGSTContent = () => {
@@ -74,6 +76,7 @@ export const GGSTContent = () => {
     video: "video/sf6main",
     fontStyle: "ggstFont",
     fontSize: "1vw",
+    fontSizeRight: "1.5vw",
   };
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // useState to store index
@@ -119,7 +122,9 @@ export const GGSTContent = () => {
         </div>
         <div
           className="column right"
-          style={{ borderColor: selectedCharInfo?.color || "#555" }}
+          style={{
+            borderColor: selectedCharInfo?.color || "#555",
+          }}
         >
           <RightContent
             key={selectedCharInfo ? selectedCharInfo.name : "game-info"}

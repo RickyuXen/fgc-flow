@@ -18,6 +18,8 @@ interface CharacterInfo {
   video: string;
   notablePlayers: string[];
   color: string;
+  pros?: string[];
+  cons?: string[];
 }
 
 export const SF6Content = () => {
@@ -35,6 +37,18 @@ export const SF6Content = () => {
     {
       name: "Kimberly",
       image: kimImage,
+    },
+    {
+      name: "Luke",
+      image: lukeImage,
+    },
+    {
+      name: "Luke",
+      image: lukeImage,
+    },
+    {
+      name: "Luke",
+      image: lukeImage,
     },
     {
       name: "Luke",

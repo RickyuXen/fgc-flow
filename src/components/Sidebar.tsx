@@ -4,9 +4,15 @@ interface SidebarProps {
   gameTitle: string[];
   selectedIndex: number | null;
   onSelectItem: (gameTitle: string, index: number) => void;
+  isOpen: boolean; // New prop for controlling visibility
 }
 
-const Sidebar = ({ gameTitle, selectedIndex, onSelectItem }: SidebarProps) => {
+const Sidebar = ({
+  gameTitle,
+  selectedIndex,
+  onSelectItem,
+  isOpen,
+}: SidebarProps) => {
   const [searchQuery, setSearchQuery] = useState<string>(""); // State for search input
   const [filteredTitles, setFilteredTitles] = useState<string[]>(gameTitle); // Filtered titles
 
@@ -20,7 +26,7 @@ const Sidebar = ({ gameTitle, selectedIndex, onSelectItem }: SidebarProps) => {
   }, [searchQuery, gameTitle]);
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
       <input
         type="text"
         placeholder="Search"
