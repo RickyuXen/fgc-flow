@@ -31,6 +31,7 @@ interface GameInfo {
 interface RightContentProps {
   CharacterInfo: CharacterInfo | null;
   GameInfo: GameInfo;
+  GameLogo?: string;
   clearCharacterInfo?: () => void;
 }
 
@@ -156,10 +157,10 @@ export const RightContent = (props: RightContentProps) => {
               </motion.div>
               <motion.div
                 key={"video-content"}
-                initial={{ opacity: 0, x: -200 }} // Start off-screen to the left
-                animate={{ opacity: 1, x: 0 }} // Animate to fully visible position
-                exit={{ opacity: 0, x: -200 }} // Exit to the left
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                initial={{ opacity: 0, y: 200 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -200 }}
+                transition={{ duration: 1.4, ease: "easeInOut" }}
               >
                 <div
                   className="resources-under-video"
@@ -213,7 +214,9 @@ export const RightContent = (props: RightContentProps) => {
             </h2>
             <div
               className="characters-overviews"
-              style={{ fontSize: props.GameInfo.fontSizeRight }}
+              style={{
+                fontSize: isMobile ? "2.5em" : props.GameInfo.fontSizeRight,
+              }}
             >
               <h3 style={{ textAlign: "center" }}>Overview</h3>
               <p>{props.CharacterInfo.overview}</p>
@@ -250,22 +253,33 @@ export const RightContent = (props: RightContentProps) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 200 }}
             transition={{ duration: 0.75, ease: "easeInOut" }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              flex: 3,
+              alignItems: "center", // Center horizontally
+              justifyContent: "flex-start", // Align to the top
+              overflow: "auto",
+              fontSize: isMobile ? "5rem" : "3rem", // text size on main page
+            }}
           >
             <ReactPlayer
-              className="character-video"
+              className="game-video"
               url={props.GameInfo.video}
               controls={false}
               loop
-              width={isMobile ? "80vw" : "58.025vw"}
-              height={isMobile ? "25vh" : "63vh"}
+              width={isMobile ? "80vw" : "54vw"}
+              height={isMobile ? "25vh" : "58.6vh"}
               playing
               style={{
+                justifyContent: "center",
                 borderRight: "0.741vh solid #555",
                 borderLeft: "0.741vh solid #555",
                 borderTop: "0.741vh solid #555",
                 borderBottom: "0.741vh solid #555",
                 borderRadius: "1.481vh",
                 borderColor: "#555",
+                marginBottom: "1vh",
               }}
             />
             <motion.div
@@ -276,6 +290,10 @@ export const RightContent = (props: RightContentProps) => {
               transition={{ duration: 0.75, ease: "easeInOut" }}
             >
               <div className="game-mainpage">
+                <img
+                  src={props.GameLogo}
+                  alt={`${props.GameInfo.title} Logo`}
+                />
                 <p>{props.GameInfo.mainInfo}</p>
               </div>
             </motion.div>

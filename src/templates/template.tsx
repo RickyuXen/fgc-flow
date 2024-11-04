@@ -4,6 +4,8 @@ import { RightContent } from "../components/RightContent";
 import { useState } from "react";
 // import all character splash images (for selecting characters)
 import lukeImage from "../assets/SF6/luke.png";
+// Import game logo
+import gameLogo from "../assets/SF6/sf6logo.png";
 // import game and characterinfo json files ; do not change variables, if there is a fontstyle, have to add to fonts.css
 import CharacterInfos from "../data/sf6CharactersInfo.json";
 import gameInfo from "../data/sf6gameinfo.json";
@@ -82,6 +84,7 @@ export const gameContent = () => {
             key={selectedCharInfo ? selectedCharInfo.name : "game-info"}
             CharacterInfo={selectedCharInfo}
             GameInfo={gameInfo}
+            GameLogo={gameLogo}
             clearCharacterInfo={handleClearChar}
           />
         </div>

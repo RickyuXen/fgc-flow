@@ -36,8 +36,9 @@
   display: flex;
   border-right: 0.37vh solid #555;
   border-left: 0.37vh solid #555;
-  overflow: hidden;
   position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
 }
 
 .game-mainpage{
@@ -67,12 +68,19 @@
   padding-left: 2vw;
   padding-right: 2vw;
   text-align: left;
+  height: 100%;
+  position: relative;
+}
+
+.characters-information > div {
+  flex-shrink: 0; /* Prevent shrinking */
+  flex-grow: 1; /* Allow these divs to grow and take available space */
 }
 
 .characters-information button{
-  margin-top: 2vh;
+  margin-top: auto;
+  margin-bottom: auto;
   align-self: flex-end;
-  margin-bottom: 0.5vh;
 }
 
 .characters-list ul{
@@ -234,6 +242,7 @@ button:focus {
     border-right: 0.37vh solid #555;
     border-left: 0.37vh solid #555;
     overflow-x: auto;
+    overflow-y: hidden;
     position: relative;
   }
 

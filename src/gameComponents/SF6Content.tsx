@@ -5,6 +5,7 @@ import ryuImage from "../assets/SF6/ryu.png";
 import kenImage from "../assets/SF6/ken.png";
 import kimImage from "../assets/SF6/kimberly.png";
 import lukeImage from "../assets/SF6/luke.png";
+import gameLogo from "../assets/SF6/sf6logo.png";
 import CharacterInfos from "../data/sf6CharactersInfo.json";
 import gameInfo from "../data/sf6gameinfo.json";
 import { RightContent } from "../components/RightContent";
@@ -107,6 +108,7 @@ export const SF6Content = () => {
             key={selectedCharInfo ? selectedCharInfo.name : "game-info"}
             CharacterInfo={selectedCharInfo}
             GameInfo={gameInfo}
+            GameLogo={gameLogo}
             clearCharacterInfo={handleClearChar}
           />
         </div>
