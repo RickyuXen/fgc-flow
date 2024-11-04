@@ -5,6 +5,7 @@ import { useState } from "react";
 import solImage from "../assets/GGST/SolBadguy.png";
 import kyImage from "../assets/GGST/KyKiske.png";
 import mayImage from "../assets/GGST/May.png";
+import gameLogo from "../assets/GGST/ggstlogo.png"
 
 interface CharacterInfo {
   name: string;
@@ -130,6 +131,7 @@ export const GGSTContent = () => {
             key={selectedCharInfo ? selectedCharInfo.name : "game-info"}
             CharacterInfo={selectedCharInfo}
             GameInfo={gameInfo}
+            GameLogo={gameLogo}
             clearCharacterInfo={handleClearChar}
           />
         </div>

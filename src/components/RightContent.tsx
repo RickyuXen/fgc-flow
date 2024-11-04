@@ -32,6 +32,7 @@ interface RightContentProps {
   CharacterInfo: CharacterInfo | null;
   GameInfo: GameInfo;
   GameLogo?: string;
+  GameLogoSize?: string[];
   clearCharacterInfo?: () => void;
 }
 
@@ -293,6 +294,10 @@ export const RightContent = (props: RightContentProps) => {
                 <img
                   src={props.GameLogo}
                   alt={`${props.GameInfo.title} Logo`}
+                  style={{
+                    width: isMobile ? "3.2vh" : `30vw`,
+                    height: isMobile ? "3.033vh" : "20vh"
+                  }}
                 />
                 <p>{props.GameInfo.mainInfo}</p>
               </div>
