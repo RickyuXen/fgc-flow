@@ -1,0 +1,12 @@
+------------- todo / suggesions list ----------------------------
+- Add in gameSize list[] to game info for size of logo in main screen
+- Touch up navbar; make it more modern/interactive - maybe add in some animation to load in the words
+    - on hover: have the navbar light up?
+- Create some table in main game section (right content) that will display all of the game's information
+- Fix up mobile view; hamburger icon is not in a good position
+- Change the notable players list[] into an object list: [{player: "someguy", link: "twitch.tv/someguy"}]
+    - display players list as a href to redirect to player twitch/X/youtube page
+- Have a way to 'scroll' between videos when viewing a character -> have to change yotube link to a list -> this will be more complicated to implement
+- Make the about section not scuffed
+- major suggestion: -> make the right side of right content (character information) be able to flip like a book
+    - have it display more information on the character itself; not just overview -> simple bnbs/setups/gameplan of character
