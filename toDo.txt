@@ -10,3 +10,8 @@
 - Make the about section not scuffed
 - major suggestion: -> make the right side of right content (character information) be able to flip like a book
     - have it display more information on the character itself; not just overview -> simple bnbs/setups/gameplan of character
+- See if I can add backend for ideas like:
+    - User reviews on characters
+        - requires account creation
+        - username, password, email, contribution count?, forums?
+- move the whole project to vite
