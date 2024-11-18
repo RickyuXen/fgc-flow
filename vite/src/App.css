@@ -1,0 +1,156 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2e2e2e;
+  color: white;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 10.417vw;
+  height: 100vh;
+  background-color: #1c1c1c;
+  padding: 2.4vh 1.5vw 0vh 0vh;
+  position: fixed;
+  transition: transform 0.3s ease;
+  transform: translateX(0); 
+}
+
+.sidebar h2 {
+  font-size: 2.4vh;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  margin-left: 1.5vw;
+  margin-bottom: -1.5vh;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-right: -1vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  direction: rtl;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+  height: 85vh;
+}
+
+.sidebar ul li {
+  margin: 1vh 0;
+  font-size: 1.6vh;
+  padding: 2vh 2vw;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li:hover {
+  background-color: #444;
+  color: #00aaff;
+  border-radius: 2vh; 
+  cursor: pointer;
+}
+
+.sidebar ul li.active {
+  background-color: #555;
+  color: #00ccff;
+  border-radius: 2vh;
+}
+
+/* Main content area */
+.main-content {
+  margin-left: 11.458vw;
+  padding: 2vh; 
+  overflow: hidden;
+  height: auto;
+}
+
+.header {
+  font-size: 3.2vh; 
+  font-weight: 1000;
+  margin-bottom: 1.5vh; 
+  padding-top: 0.7vh; 
+  padding-bottom: 0.7vh; 
+  background-color: #1c1c1c;
+  border-radius: 2vh;
+  letter-spacing: 0.1vw;
+  color: #00ccff;
+}
+
+.header:hover {
+  cursor: pointer;
+}
+
+.section {
+  margin-bottom: 4vh;
+}
+
+.links a {
+  color: #00aaff;
+  text-decoration: none;
+  margin-right: 1.3vw;
+  overflow: hidden;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.75rem;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem; 
+  right: 1rem; 
+}
+
+/* Media query for mobile devices */
+@media (max-width: 700px) {
+  .sidebar {
+    width: 40vw; 
+    height: 100vh; 
+    background-color: #1c1c1c; 
+    padding: 2.4vh 1.5vw 0vh 0vh; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); 
+    width: 40vw;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger button on mobile */
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Show sidebar when open */
+  }
+
+  .sidebar h2 {
+    font-size: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: -1.5vh;
+  }
+  
+  .main-content {
+    margin-left: 0vw;
+    padding: 3vh;
+    overflow: auto;
+  }
+
+}

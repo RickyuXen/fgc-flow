@@ -1,14 +1,14 @@
 import "../components/gameContent.css";
 import { Characters } from "../components/Characters";
-import { RightContent } from "../components/RightContent";
 import { useState } from "react";
-// import all character splash images (for selecting characters)
+import ryuImage from "../assets/SF6/ryu.png";
+import kenImage from "../assets/SF6/ken.png";
+import kimImage from "../assets/SF6/kimberly.png";
 import lukeImage from "../assets/SF6/luke.png";
-// Import game logo
 import gameLogo from "../assets/SF6/sf6logo.png";
-// import game and characterinfo json files ; do not change variables, if there is a fontstyle, have to add to fonts.css
 import CharacterInfos from "../data/sf6CharactersInfo.json";
 import gameInfo from "../data/sf6gameinfo.json";
+import { RightContent } from "../components/RightContent";
 
 interface CharacterInfo {
   name: string;
@@ -22,13 +22,37 @@ interface CharacterInfo {
   pros?: string[];
   cons?: string[];
 }
-// name should be the same as file without '.tsx'
-export const gameContent = () => {
+
+export const SF6Content = () => {
   // Characters in the game and images for character selection; headache to use this in JSON file
   let characters = [
-    // Values used in left-character selection image should be a reference from imported image
+    // Values used in left-character selection
     {
       name: "Ryu",
+      image: ryuImage,
+    },
+    {
+      name: "Ken",
+      image: kenImage,
+    },
+    {
+      name: "Kimberly",
+      image: kimImage,
+    },
+    {
+      name: "Luke",
+      image: lukeImage,
+    },
+    {
+      name: "Luke",
+      image: lukeImage,
+    },
+    {
+      name: "Luke",
+      image: lukeImage,
+    },
+    {
+      name: "Luke",
       image: lukeImage,
     },
   ];
@@ -92,5 +116,3 @@ export const gameContent = () => {
     </>
   );
 };
-
-// After importing all information, add reference and string to switch statement in Section.tsx

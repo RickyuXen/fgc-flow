@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Ryu",
+    "tags": ["Shoto", "Neutral", "Corner-Carry", "Beard"],
+    "overview": "Ever training, this martial artist seeks true strength. Well-mannered and sincere, Ryu travels the globe in search of worthy opponents. Having overcome the Satsui no Hado, he now seeks yet greater heights.",
+    "difficulty": "5",
+    "video": "https://www.youtube.com/watch?v=-9MB38W2Gfw",
+    "notablePlayers": ["Paladin", "Yas"],
+    "resources": ["https://www.streetfighter.com/6/character/ryu", "https://wiki.supercombo.gg/w/Street_Fighter_6/Ryu", "https://www.youtube.com/results?search_query=street+fighter+6+Ryu+Guide", "https://replaytheater.app/?game=sf6&c1=Ryu", "www.test.com", "www.test.com", "www.test.com"],
+    "color": "#999",
+    "pros": ["Strong neutral", "Ryu From Streets"],
+    "cons": ["Better Shoto options", "Ryu From Streets"]
+  },
+  {
+    "name": "Ken",
+    "tags": ["Shoto", "Neutral", "Corner-Carry", "Homeless", "Crypto-Bro"],
+    "overview": "Former US National Fighting Champ, and ex-VP of the Masters Foundation. Accusations of orchestrating a criminal plot have forced Ken to abandon his family and business and go into hiding.",
+    "difficulty": "2",
+    "video": "https://www.youtube.com/watch?v=gip4mso1h70",
+    "notablePlayers": ["Daigo"],
+    "resources": ["https://www.streetfighter.com/6/character/ken", ""],
+    "color": "red"
+  },
+  {
+    "name": "Kimberly",
+    "tags": ["Shoto", "Neutral", "Corner-Carry", "Feet"],
+    "overview": "Some overview on Ken",
+    "difficulty": "3",
+    "video": "https://www.youtube.com/watch?v=A0q2oXL0G74",
+    "notablePlayers": ["Diaphone"],
+    "resources": ["https://www.streetfighter.com/6/character/kimberly", ""],
+    "color": "#AA336A"
+  },
+  {
+    "name": "Luke",
+    "tags": ["Shoto", "Neutral", "Corner-Carry", "Feet"],
+    "overview": "Some overview on Luke",
+    "difficulty": "2",
+    "video": "https://www.youtube.com/watch?v=3YDXcMe-YiA",
+    "notablePlayers": ["MenaRD"],
+    "resources": ["https://www.streetfighter.com/6/character/luke", ""],
+    "color": "#FF8C00"
+  }
+]

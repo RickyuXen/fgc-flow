@@ -204,7 +204,7 @@ export const RightContent = (props: RightContentProps) => {
             <h2
               style={{
                 textAlign: "center",
-                marginBottom: "0vh",
+                marginBottom: "-2vh",
                 marginTop: "0vh",
                 color: `${props.CharacterInfo.color}`,
                 fontSize: isMobile ? "7em" : "3.5em",
@@ -296,7 +296,7 @@ export const RightContent = (props: RightContentProps) => {
                   alt={`${props.GameInfo.title} Logo`}
                   style={{
                     width: isMobile ? "3.2vh" : `30vw`,
-                    height: isMobile ? "3.033vh" : "20vh"
+                    height: isMobile ? "3.033vh" : "20vh",
                   }}
                 />
                 <p>{props.GameInfo.mainInfo}</p>

@@ -193,6 +193,11 @@
   color: var(--active-color, rgb(121, 238, 121));
 }
 
+.right-bottom-buttons{
+  display: flex;
+  margin-top: 1vh;
+}
+
 button {
   background-color: #555; 
   color: #eee; 
@@ -203,6 +208,9 @@ button {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, transform 0.2s;
   box-shadow: 0 0.5vh 0.8vh rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button:hover {
