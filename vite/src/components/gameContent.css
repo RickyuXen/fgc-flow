@@ -46,6 +46,10 @@
   text-align: center;
 }
 
+.game-mainpage p{
+  font-size: 2rem;
+}
+
 .video-content{
   flex: 1;
   padding-right: 2vw;

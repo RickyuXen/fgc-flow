@@ -6,5 +6,6 @@
     "video": "",
     "fontStyle": "",
     "fontSize": "",
-    "fontSizeRight": ""
+    "fontSizeRight": "",
+    "gameLogoSize": ["width", "height", "mobileWidth", "mobileHeight"]
 }

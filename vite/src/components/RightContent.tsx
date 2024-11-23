@@ -26,13 +26,13 @@ interface GameInfo {
   fontStyle?: string;
   fontSize?: string;
   fontSizeRight?: string;
+  gameLogoSize?: string[];
 }
 
 interface RightContentProps {
   CharacterInfo: CharacterInfo | null;
   GameInfo: GameInfo;
   GameLogo?: string;
-  GameLogoSize?: string[];
   clearCharacterInfo?: () => void;
 }
 
@@ -295,11 +295,19 @@ export const RightContent = (props: RightContentProps) => {
                   src={props.GameLogo}
                   alt={`${props.GameInfo.title} Logo`}
                   style={{
-                    width: isMobile ? "3.2vh" : `30vw`,
-                    height: isMobile ? "3.033vh" : "20vh",
+                    width: isMobile
+                      ? props.GameInfo.gameLogoSize?.[2] || "5vw"
+                      : props.GameInfo.gameLogoSize?.[0] || "10vw",
+                    height: isMobile
+                      ? props.GameInfo.gameLogoSize?.[3] || "5vw"
+                      : props.GameInfo.gameLogoSize?.[1] || "10vw",
                   }}
                 />
                 <p>{props.GameInfo.mainInfo}</p>
+                <p>
+                  Published by {props.GameInfo.publisher} and released in{" "}
+                  {props.GameInfo.datePublished}
+                </p>
               </div>
             </motion.div>
           </motion.div>

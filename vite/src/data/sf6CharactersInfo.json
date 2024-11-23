@@ -17,14 +17,14 @@
     "overview": "Former US National Fighting Champ, and ex-VP of the Masters Foundation. Accusations of orchestrating a criminal plot have forced Ken to abandon his family and business and go into hiding.",
     "difficulty": "2",
     "video": "https://www.youtube.com/watch?v=gip4mso1h70",
-    "notablePlayers": ["Daigo"],
+    "notablePlayers": ["Daigo", "EndlessWalker"],
     "resources": ["https://www.streetfighter.com/6/character/ken", ""],
     "color": "red"
   },
   {
     "name": "Kimberly",
     "tags": ["Shoto", "Neutral", "Corner-Carry", "Feet"],
-    "overview": "Some overview on Ken",
+    "overview": "Some overview on Kimberly",
     "difficulty": "3",
     "video": "https://www.youtube.com/watch?v=A0q2oXL0G74",
     "notablePlayers": ["Diaphone"],
