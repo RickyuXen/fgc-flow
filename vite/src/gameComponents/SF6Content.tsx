@@ -7,7 +7,7 @@ import kimImage from "../assets/SF6/kimberly.png";
 import lukeImage from "../assets/SF6/luke.png";
 import gameLogo from "../assets/SF6/sf6logo.png";
 import CharacterInfos from "../data/sf6CharactersInfo.json";
-import gameInfo from "../data/sf6gameinfo.json";
+import gameInfo from "../data/sf6Gameinfo.json";
 import { RightContent } from "../components/RightContent";
 
 interface CharacterInfo {

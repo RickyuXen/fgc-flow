@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Sol Badguy",
+      "tags": ["Shoto", "Neutral", "Corner-Carry", "Bol Sadguy"],
+      "overview": "Some overview on SOL BADGUY",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=Jm0oh5RYTIE",
+      "notablePlayers": ["IDK", "IDK"],
+      "resources": ["", "", "", "", "https://www.test.com"],
+      "color": "#8b0000",
+      "pros": ["badguy", ""],
+      "cons": ["dad", ""]
+    },
+    {
+        "name": "Ky Kiske",
+        "tags": ["Shoto", "Neutral", "Corner-Carry", "RoboKy"],
+        "overview": "Some overview on Ky Kiske",
+        "difficulty": "1",
+        "video": "https://www.youtube.com/watch?v=oWXpJ8wERMQ",
+        "notablePlayers": ["IDK", "IDK"],
+        "resources": ["", "", "", "", "https://www.test.com"],
+        "color": "#318CE7",
+        "pros": ["ky", ""],
+        "cons": ["ky", ""]
+      },
+      {
+        "name": "May",
+        "tags": ["Charge", "TOTSUGEKI", "Dolphin", "Responsible"],
+        "overview": "Some overview on May",
+        "difficulty": "3",
+        "video": "https://www.youtube.com/watch?v=BtEFRYIUF6o",
+        "notablePlayers": ["IDK", "IDK"],
+        "resources": ["", "", "", "", "https://www.test.com"],
+        "color": "#FFB52E",
+        "pros": ["May", ""],
+        "cons": ["May", ""]
+      }
+  ]
+  

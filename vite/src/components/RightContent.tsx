@@ -240,9 +240,7 @@ export const RightContent = (props: RightContentProps) => {
             </div>
 
             <div>
-              <button onClick={props.clearCharacterInfo}>
-                Back to {props.GameInfo.title}
-              </button>
+              <button onClick={props.clearCharacterInfo}>Back to game</button>
             </div>
           </motion.div>
         </>

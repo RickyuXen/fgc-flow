@@ -17,3 +17,7 @@ Check src/templates folder for templates
 - Add in all character info
 - Import file into game content tsx file created when adding a new game
 - Make sure that characters match up with characters array in game content tsx file
+
+## Additional information
+
+- Assets have to be in src for javascript

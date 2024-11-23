@@ -1,8 +1,8 @@
 ------------- todo / suggesions list ----------------------------
-- Add in gameSize list[] to game info for size of logo in main screen
+- Add in gameSize list[] to game info for size of logo in main screen [done]
 - Touch up navbar; make it more modern/interactive - maybe add in some animation to load in the words
     - on hover: have the navbar light up?
-- Create some table in main game section (right content) that will display all of the game's information
+- Create some table in main game section (right content) that will display all of the game's information [next goal]
 - Fix up mobile view; hamburger icon is not in a good position
 - Change the notable players list[] into an object list: [{player: "someguy", link: "twitch.tv/someguy"}]
     - display players list as a href to redirect to player twitch/X/youtube page
@@ -14,4 +14,5 @@
     - User reviews on characters
         - requires account creation
         - username, password, email, contribution count?, forums?
-- move the whole project to vite
+- move the whole project to vite [done]
+- add some copyright thing for using youtube videos - this website is non-commercial
