@@ -2,12 +2,13 @@ import "../components/gameContent.css";
 import { Characters } from "../components/Characters";
 import { RightContent } from "../components/RightContent";
 import { useState } from "react";
-import gameInfo from "../data/ggstGameinfo.json";
-import CharacterInfos from "../data/ggstCharactersInfo.json";
+// character images
 import solImage from "../assets/GGST/SolBadguy.png";
 import kyImage from "../assets/GGST/KyKiske.png";
 import mayImage from "../assets/GGST/May.png";
 import gameLogo from "../assets/GGST/ggstlogo.png";
+import gameInfo from "../data/ggstGameinfo.json";
+import CharacterInfos from "../data/ggstCharactersInfo.json";
 
 interface CharacterInfo {
   name: string;

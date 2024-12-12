@@ -8,7 +8,7 @@ import lukeImage from "../assets/SF6/luke.png";
 import gameLogo from "../assets/SF6/sf6logo.png";
 // import game and characterinfo json files ; do not change variables, if there is a fontstyle, have to add to fonts.css
 import CharacterInfos from "../data/sf6CharactersInfo.json";
-import gameInfo from "../data/sf6gameinfo.json";
+import gameInfo from "../data/sf6Gameinfo.json";
 
 interface CharacterInfo {
   name: string;

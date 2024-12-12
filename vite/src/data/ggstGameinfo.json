@@ -1,11 +1,11 @@
 {
     "title": "Guilty Gear Strive",
-    "mainInfo": "Guilty Gear Strive is a game developed by ArcSys and part of the Guilty Gear franchise",
+    "mainInfo": "Guilty Gear -Strive- is the latest entry in the Guilty Gear franchise, featuring new and redesigned mechanics. Several characters from Guilty Gear XX and Guilty Gear Xrd have returned alongside many new characters.",
     "datePublished": "2021",
     "publisher": "ArcSys",
     "video": "https://www.youtube.com/watch?v=RVd6vhFhYiM",
     "fontStyle": "ggstFont",
     "fontSize": "1vw",
     "fontSizeRight": "1vw",
-    "gameLogoSize": ["20vw", "15vh", "10vw", "10vh"]
+    "gameLogoSize": ["25vw", "15vh", "10vw", "10vh"]
 }
