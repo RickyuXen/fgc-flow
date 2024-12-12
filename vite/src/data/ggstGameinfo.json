@@ -7,5 +7,5 @@
     "fontStyle": "ggstFont",
     "fontSize": "1vw",
     "fontSizeRight": "1vw",
-    "gameLogoSize": ["25vw", "15vh", "10vw", "10vh"]
+    "gameLogoSize": ["25vw", "15vh", "55vw", "12vh"]
 }
