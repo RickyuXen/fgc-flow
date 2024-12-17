@@ -1,7 +1,7 @@
 import BottomLinks from "./BottomLinks";
 import { SF6Content } from "../gameComponents/SF6Content";
 import { GGSTContent } from "../gameComponents/GGSTContent";
-import { TxkoContent } from "../gameComponents/TxkoContent";
+// import { TxkoContent } from "../gameComponents/TxkoContent";
 
 interface SectionProps {
   title: string;
@@ -20,15 +20,16 @@ const Section = (props: SectionProps) => {
           <h2 style={{ marginLeft: "7vw", marginRight: "7vw" }}>
             About:
             <br />
-            <br /> FGC-FLOW was created wtih REACT.tsx, with the intention to
-            centralize specific character information into a single, modernized
-            website. Users can view listed games, as well as characters for
-            those games along with character information and resources specific
-            to those characters.
-            <br /> <br />
+            <br /> FGC-FLOW was created wtih Vite and Typescript, with the
+            intention to centralize specific character information into a
+            single, modernized website. Users can view listed games, as well as
+            characters for those games along with character information and
+            resources specific to those characters.
+            <br />
+            <br />
             Note that this website was not made with mobile phones, portrait
             mode in mind. If you are using a phone, switching to landscape
-            or(and) desktop view for a better experience.
+            and/or desktop view for a better experience.
             <br />
             <br />
           </h2>
@@ -39,8 +40,8 @@ const Section = (props: SectionProps) => {
         return <SF6Content />;
       case "Guilty Gear Strive":
         return <GGSTContent />;
-      case "2XKO":
-        return <TxkoContent />;
+      // case "2XKO":
+      //   return <TxkoContent />;
       default:
         return <p>Error: Section not found.</p>;
     }

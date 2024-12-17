@@ -4,7 +4,7 @@ import MainContent from "./components/MainContent";
 import "./App.css"; // Optional: for global styles
 
 function App() {
-  let gameList = ["Street Fighter 6", "Guilty Gear Strive", "2XKO"];
+  let gameList = ["Street Fighter 6", "Guilty Gear Strive"];
   const [selectedGame, setSelectedGame] = useState<string>(""); // selected game
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // selected game index
   const [isSidebarOpen, setSideBar] = useState<boolean>(false);

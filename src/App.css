@@ -70,6 +70,7 @@ body {
   padding: 2vh; 
   overflow: hidden;
   height: auto;
+  background-color: #2e2e2e;
 }
 
 .header {
@@ -111,7 +112,7 @@ body {
   font-size: 0.75rem;
   cursor: pointer;
   position: fixed;
-  top: 1rem; 
+  top: 1.5rem; 
   right: 1rem; 
 }
 
@@ -151,6 +152,7 @@ body {
     margin-left: 0vw;
     padding: 3vh;
     overflow: auto;
+    font-size: 0.7rem;
   }
 
 }

@@ -267,7 +267,7 @@ export const RightContent = (props: RightContentProps) => {
               url={props.GameInfo.video}
               controls={false}
               loop
-              width={isMobile ? "80vw" : "54vw"}
+              width={isMobile ? "75vw" : "54vw"}
               height={isMobile ? "25vh" : "58.6vh"}
               playing
               style={{

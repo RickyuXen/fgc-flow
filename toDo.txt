@@ -16,3 +16,4 @@
         - username, password, email, contribution count?, forums?
 - move the whole project to vite [done]
 - add some copyright thing for using youtube videos - this website is non-commercial
+- make the length of the div on about section for mobile longer
