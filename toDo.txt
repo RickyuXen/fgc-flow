@@ -16,4 +16,4 @@
         - username, password, email, contribution count?, forums?
 - move the whole project to vite [done]
 - add some copyright thing for using youtube videos - this website is non-commercial
-- Add in bottomlinks: Similar websites and contact
+- Add: volume slider

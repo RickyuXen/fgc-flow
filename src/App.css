@@ -116,6 +116,10 @@ body {
   right: 1rem; 
 }
 
+.volume-container {
+  display: block;
+}
+
 /* Media query for mobile devices */
 @media (max-width: 700px) {
   .sidebar {
@@ -153,6 +157,10 @@ body {
     padding: 3vh;
     overflow: auto;
     font-size: 0.7rem;
+  }
+
+  .volume-container {
+    display:none;
   }
 
 }

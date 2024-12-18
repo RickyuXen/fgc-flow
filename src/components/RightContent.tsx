@@ -1,6 +1,7 @@
 import "./gameContent.css";
 import "../fonts.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { useVolume } from "./VolumeContext";
 import ReactPlayer from "react-player";
 import oneStar from "../assets/stars/oneStar.png";
 
@@ -38,6 +39,7 @@ interface RightContentProps {
 
 export const RightContent = (props: RightContentProps) => {
   const isMobile = window.innerWidth <= 700; // if on mobile, set different sizes
+  const { volume } = useVolume(); // Access global volume to control volume of videos
   // Function to create resources link with just the website name
   const createResourceLinks = () => {
     return props.CharacterInfo?.resources?.map((link, index) => {
@@ -99,6 +101,7 @@ export const RightContent = (props: RightContentProps) => {
               <ReactPlayer
                 url={props.CharacterInfo.video}
                 controls={false}
+                volume={volume}
                 loop
                 width={isMobile ? "34vh" : "62.5vh"}
                 height={isMobile ? "20vh" : "35.1vh"}
@@ -266,6 +269,7 @@ export const RightContent = (props: RightContentProps) => {
               className="game-video"
               url={props.GameInfo.video}
               controls={false}
+              volume={volume}
               loop
               width={isMobile ? "75vw" : "54vw"}
               height={isMobile ? "24vh" : "58.6vh"}

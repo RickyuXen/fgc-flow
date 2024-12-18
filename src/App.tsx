@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { VolumeProvider } from "./components/VolumeContext";
+import { VolumeSlider } from "./components/VolumeSlider";
 import Sidebar from "./components/Sidebar";
 import MainContent from "./components/MainContent";
 import "./App.css"; // Optional: for global styles
@@ -39,17 +41,15 @@ function App() {
         selectedIndex={selectedIndex}
         isOpen={isSidebarOpen} // Pass isOpen to the Sidebar
       />
-      <MainContent
-        selectedGame={selectedGame}
-        onClearSection={handleClearSection}
-      />
+      <VolumeProvider>
+        <MainContent
+          selectedGame={selectedGame}
+          onClearSection={handleClearSection}
+        />
+        <VolumeSlider />
+      </VolumeProvider>
     </div>
   );
 }
 
 export default App;
-
-// add logo to main game screen
-// add personal logo to site
-// change pros and cons to a list and have that list be generated
-// remove excess code/content

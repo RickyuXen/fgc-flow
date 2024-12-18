@@ -29,7 +29,7 @@ const Section = (props: SectionProps) => {
               </p>
               <p>
                 Please note: This website is not optimized for mobile devices in
-                portrait mode. For the best experience, we recommend using
+                portrait mode. For the best experience, I recommend using
                 landscape mode or viewing on a desktop.
               </p>
             </div>
