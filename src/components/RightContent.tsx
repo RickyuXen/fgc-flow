@@ -268,7 +268,7 @@ export const RightContent = (props: RightContentProps) => {
               controls={false}
               loop
               width={isMobile ? "75vw" : "54vw"}
-              height={isMobile ? "25vh" : "58.6vh"}
+              height={isMobile ? "24vh" : "58.6vh"}
               playing
               style={{
                 justifyContent: "center",

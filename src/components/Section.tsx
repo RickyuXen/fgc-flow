@@ -1,6 +1,7 @@
 import BottomLinks from "./BottomLinks";
 import { SF6Content } from "../gameComponents/SF6Content";
 import { GGSTContent } from "../gameComponents/GGSTContent";
+import ContactSection from "./ContactSection";
 // import { TxkoContent } from "../gameComponents/TxkoContent";
 
 interface SectionProps {
@@ -17,22 +18,23 @@ const Section = (props: SectionProps) => {
     switch (props.title) {
       case "About":
         return (
-          <h2 style={{ marginLeft: "7vw", marginRight: "7vw" }}>
-            About:
-            <br />
-            <br /> FGC-FLOW was created wtih Vite and Typescript, with the
-            intention to centralize specific character information into a
-            single, modernized website. Users can view listed games, as well as
-            characters for those games along with character information and
-            resources specific to those characters.
-            <br />
-            <br />
-            Note that this website was not made with mobile phones, portrait
-            mode in mind. If you are using a phone, switching to landscape
-            and/or desktop view for a better experience.
-            <br />
-            <br />
-          </h2>
+          <div>
+            <h2 style={{ margin: "0 7vw", fontSize: "2rem" }}>About:</h2>
+            <div style={{ margin: "1em 7vw", fontSize: "1.5rem" }}>
+              <p>
+                FGC-FLOW is a modernized website built with Vite and TypeScript,
+                designed to centralize character information for specific games.
+                Users can browse listed games and access detailed information
+                and resources about individual characters.
+              </p>
+              <p>
+                Please note: This website is not optimized for mobile devices in
+                portrait mode. For the best experience, we recommend using
+                landscape mode or viewing on a desktop.
+              </p>
+            </div>
+            <ContactSection />
+          </div>
         );
       case "Links":
         return <BottomLinks />;
