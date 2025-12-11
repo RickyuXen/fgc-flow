@@ -222,9 +222,11 @@ export const RightContent = (props: RightContentProps) => {
                 fontSize: isMobile ? "2.5em" : props.GameInfo.fontSizeRight,
               }}
             >
-              <h3 style={{ textAlign: "center" }}>Overview</h3>
+              <h3 style={{ textAlign: "center", fontSize: "1.2rem" }}>
+                Overview
+              </h3>
               <p>{props.CharacterInfo.overview}</p>
-              <p>Notable Players:</p>
+              <h3>Notable Players:</h3>
               {props.CharacterInfo.notablePlayers?.map((players) => {
                 return <li>{players}</li>;
               })}
@@ -272,7 +274,7 @@ export const RightContent = (props: RightContentProps) => {
               volume={volume}
               loop
               width={isMobile ? "75vw" : "54vw"}
-              height={isMobile ? "24vh" : "58.6vh"}
+              height={isMobile ? "24vh" : "61vh"}
               playing
               style={{
                 justifyContent: "center",

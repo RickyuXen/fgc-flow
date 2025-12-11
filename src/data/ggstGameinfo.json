@@ -6,6 +6,6 @@
     "video": "https://www.youtube.com/watch?v=RVd6vhFhYiM",
     "fontStyle": "ggstFont",
     "fontSize": "1vw",
-    "fontSizeRight": "1vw",
+    "fontSizeRight": "1.1rem",
     "gameLogoSize": ["25vw", "15vh", "55vw", "12vh"]
 }

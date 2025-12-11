@@ -74,6 +74,7 @@
   text-align: left;
   height: 100%;
   position: relative;
+  overflow: auto;
 }
 
 .characters-information > div {
@@ -195,6 +196,11 @@
 
 .resource-links a:hover{
   color: var(--active-color, rgb(121, 238, 121));
+}
+
+.characters-overviews h3{
+  margin-bottom: 0;
+  text-decoration: underline;
 }
 
 button {

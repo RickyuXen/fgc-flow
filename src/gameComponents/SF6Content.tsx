@@ -147,7 +147,7 @@ export const SF6Content = () => {
       image: terryImage,
     },
   ];
-  // rashid, aki, ed, akuma, m bison, terry
+
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // useState to store index
   const [selectedCharInfo, setSelectedCharInfo] = // useState to store selected character and character info
     useState<CharacterInfo | null>(null);
