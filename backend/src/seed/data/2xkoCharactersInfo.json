@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Ahri",
+      "tags": ["Rushdown", "Mobility", "Mix-Up", "Fox"],
+      "overview": "A highly mobile trickster who excels at weaving in and out of combat, Ahri uses swift movement, deceptive mix-ups, and relentless pressure to keep opponents guessing.",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=9nRmRp903gs",
+      "notablePlayers": ["Sajam", "Leffen", "Jmcrofts"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/ahri/",
+        "https://wiki.play2xko.com/en-us/Ahri/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Ahri"
+      ],
+      "color": "#D96CB3",
+      "pros": [
+        "Excellent Mobility",
+        "Strong Mix-Up Potential",
+        "Versatile Team Synergy"
+      ],
+      "cons": [
+        "Lower Range Than Some Characters",
+        "Relies on Movement and Execution"
+      ]
+    },
+    [
+        {
+          "name": "Ekko",
+          "tags": ["Setplay", "Mobility", "Traps", "Time-Reset"],
+          "overview": "A high-speed setup-based fighter who uses time manipulation and creative movement to control space, Ekko excels at creating layered pressure, baiting responses, and resetting neutral to his advantage.",
+          "difficulty": "3",
+          "video": "https://www.youtube.com/results?search_query=2XKO+Ekko+gameplay",
+          "notablePlayers": ["Maximilian Dood", "Sajam", "Jmcrofts"],
+          "resources": [
+           "https://2xko.riotgames.com/en-us/champions/ekko/",
+            "https://wiki.play2xko.com/en-us/Ekko/Combos",
+            "https://replaytheater.app/?game=2xko&c1=Ekko"
+          ],
+          "color": "#4DB6AC",
+          "pros": [
+            "Strong Setup Pressure",
+            "High Mobility and Escape Options",
+            "Excellent Tempo Control"
+          ],
+          "cons": [
+            "Requires Planning and Lab Time",
+            "Can Struggle Under Heavy Pressure",
+            "Complex Execution Compared to Simple Characters"
+          ]
+        }
+      ]
+  ]
