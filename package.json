@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev --prefix backend\" \"wait-on http://localhost:3001/api/games -t 30000 && npm run dev --prefix frontend\"",
     "dev:frontend": "npm run dev --prefix frontend",
     "dev:backend": "npm run dev --prefix backend",
     "build": "npm run build --prefix frontend",
@@ -12,6 +12,7 @@
     "deploy": "npm run build --prefix frontend && gh-pages -d frontend/dist"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "wait-on": "^9.0.10"
   }
 }

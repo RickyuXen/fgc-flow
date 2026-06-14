@@ -27,40 +27,39 @@ const Sidebar = ({
 
   return (
     <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
-      <input
-        type="text"
-        placeholder="Search"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        style={{
-          width: "80%",
-          padding: "0.4vw",
-          marginLeft: "1.5vw",
-          marginBottom: "-1vh",
-          borderRadius: "16px",
-          border: "1px solid #ccc",
-          textAlign: "center",
-        }}
-      />
-      <h2>Games</h2>
-      {filteredGames.length === 0 ? (
-        <p>No matching games found.</p>
-      ) : (
-        <ul>
-          {filteredGames.map((game) => {
-            const index = games.findIndex((entry) => entry.slug === game.slug);
-            return (
-              <li
-                key={game.slug}
-                className={index === selectedIndex ? "active" : ""}
-                onClick={() => onSelectItem(game.title, game.slug, index)}
-              >
-                {game.title}
-              </li>
-            );
-          })}
-        </ul>
-      )}
+      <div className="sidebar-inner">
+        <input
+          type="text"
+          className="sidebar-search"
+          placeholder="Search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <h2 className="sidebar-title">Games</h2>
+        {games.length === 0 ? (
+          <div className="sidebar-loading">
+            <div className="sidebar-spinner" aria-hidden="true" />
+            <p>Loading games</p>
+          </div>
+        ) : filteredGames.length === 0 ? (
+          <p className="sidebar-empty">No matching games found.</p>
+        ) : (
+          <ul className="sidebar-games">
+            {filteredGames.map((game) => {
+              const index = games.findIndex((entry) => entry.slug === game.slug);
+              return (
+                <li
+                  key={game.slug}
+                  className={index === selectedIndex ? "active" : ""}
+                  onClick={() => onSelectItem(game.title, game.slug, index)}
+                >
+                  {game.title}
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };
