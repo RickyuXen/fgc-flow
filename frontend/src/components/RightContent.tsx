@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import "./gameContent.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useVolume } from "./VolumeContext";
@@ -74,8 +75,8 @@ export const RightContent = (props: RightContentProps) => {
           src={oneStar}
           alt={`star-${index + 1}`}
           style={{
-            width: isMobile ? "3.2vh" : "9.6vh",
-            height: isMobile ? "3.033vh" : "9.1vh",
+            width: isMobile ? "1.35rem" : "9.6vh",
+            height: isMobile ? "1.35rem" : "9.1vh",
             marginRight: "0.5vh",
           }}
         />
@@ -98,25 +99,39 @@ export const RightContent = (props: RightContentProps) => {
               letterSpacing: "0.125vh",
             }}
           >
-            <div className="video-container">
+            <div
+              className="video-container character-video-frame"
+              style={
+                isMobile
+                  ? ({
+                      ["--video-border" as string]:
+                        props.CharacterInfo.color || "#555",
+                    } as CSSProperties)
+                  : undefined
+              }
+            >
               <ReactPlayer
                 url={props.CharacterInfo.video}
                 controls={false}
                 volume={volume}
                 loop
-                width={isMobile ? "34vh" : "62.5vh"}
-                height={isMobile ? "20vh" : "35.1vh"}
+                width={isMobile ? "100%" : "62.5vh"}
+                height={isMobile ? "100%" : "35.1vh"}
                 playing
-                style={{
-                  borderRight: "0.741vh solid #555",
-                  borderLeft: "0.741vh solid #555",
-                  borderTop: "0.741vh solid #555",
-                  borderBottom: "0.741vh solid #555",
-                  borderRadius: "1.481vh",
-                  borderColor: props.CharacterInfo.color
-                    ? props.CharacterInfo.color
-                    : "#555",
-                }}
+                style={
+                  isMobile
+                    ? undefined
+                    : {
+                        borderRight: "0.741vh solid #555",
+                        borderLeft: "0.741vh solid #555",
+                        borderTop: "0.741vh solid #555",
+                        borderBottom: "0.741vh solid #555",
+                        borderRadius: "1.481vh",
+                        borderColor: props.CharacterInfo.color
+                          ? props.CharacterInfo.color
+                          : "#555",
+                      }
+                }
               />
             </div>
             <div className="values-under-video">
@@ -206,12 +221,13 @@ export const RightContent = (props: RightContentProps) => {
             }}
           >
             <h2
+              className="character-detail-name"
               style={{
                 textAlign: "center",
-                marginBottom: "-2vh",
+                marginBottom: isMobile ? "0.65rem" : "-2vh",
                 marginTop: "0vh",
                 color: `${props.CharacterInfo.color}`,
-                fontSize: isMobile ? "7em" : "3.5em",
+                fontSize: isMobile ? "1.75rem" : "3.5em",
                 textTransform: "uppercase",
               }}
             >
@@ -220,7 +236,7 @@ export const RightContent = (props: RightContentProps) => {
             <div
               className="characters-overviews"
               style={{
-                fontSize: isMobile ? "2.5em" : props.GameInfo.fontSizeRight,
+                fontSize: isMobile ? "1rem" : props.GameInfo.fontSizeRight,
               }}
             >
               <h3 style={{ textAlign: "center", fontSize: "1.2rem" }}>
@@ -265,29 +281,35 @@ export const RightContent = (props: RightContentProps) => {
               alignItems: "center", // Center horizontally
               justifyContent: "flex-start", // Align to the top
               overflow: "auto",
-              fontSize: isMobile ? "5rem" : "3rem", // text size on main page
+              fontSize: isMobile ? "1rem" : "3rem",
             }}
           >
-            <ReactPlayer
-              className="game-video"
-              url={props.GameInfo.video}
-              controls={false}
-              volume={volume}
-              loop
-              width={isMobile ? "75vw" : "54vw"}
-              height={isMobile ? "24vh" : "61vh"}
-              playing
-              style={{
-                justifyContent: "center",
-                borderRight: "0.741vh solid #555",
-                borderLeft: "0.741vh solid #555",
-                borderTop: "0.741vh solid #555",
-                borderBottom: "0.741vh solid #555",
-                borderRadius: "1.481vh",
-                borderColor: "#555",
-                marginBottom: "1vh",
-              }}
-            />
+            <div className="game-video-container">
+              <ReactPlayer
+                className="game-video"
+                url={props.GameInfo.video}
+                controls={false}
+                volume={volume}
+                loop
+                width={isMobile ? "100%" : "54vw"}
+                height={isMobile ? "100%" : "61vh"}
+                playing
+                style={
+                  isMobile
+                    ? undefined
+                    : {
+                        justifyContent: "center",
+                        borderRight: "0.741vh solid #555",
+                        borderLeft: "0.741vh solid #555",
+                        borderTop: "0.741vh solid #555",
+                        borderBottom: "0.741vh solid #555",
+                        borderRadius: "1.481vh",
+                        borderColor: "#555",
+                        marginBottom: "1vh",
+                      }
+                }
+              />
+            </div>
             <motion.div
               key="game-mainpage"
               initial={{ opacity: 0, y: 400 }}

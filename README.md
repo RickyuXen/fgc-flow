@@ -56,7 +56,7 @@ npm run dev
 
 1. Add game JSON + character JSON to `backend/src/seed/data/`
 2. Add image manifest entries in `backend/src/seed/imageManifest.ts`
-3. Add character/game images under `frontend/public/images/<GameFolder>/`
+3. Add character/game images under `frontend/src/assets/<GameFolder>/` (synced to `public/images/` automatically on build)
 4. Register the game in `backend/src/seed/seed.ts` `GAME_CONFIG`
 5. Run `npm run seed`
 

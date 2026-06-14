@@ -47,9 +47,6 @@ function App() {
 
   return (
     <div className="App">
-      <button className="hamburger" onClick={toggleSidebar}>
-        &#9776;
-      </button>
       <Sidebar
         games={games}
         onSelectItem={handleSelectItem}
@@ -63,6 +60,8 @@ function App() {
           onClearSection={handleClearSection}
           animateHomeIntro={!homeIntroDone}
           onHomeIntroComplete={handleHomeIntroComplete}
+          onToggleSidebar={toggleSidebar}
+          isSidebarOpen={isSidebarOpen}
         />
         <VolumeSlider />
       </VolumeProvider>

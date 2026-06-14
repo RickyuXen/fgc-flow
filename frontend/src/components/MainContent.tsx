@@ -8,6 +8,8 @@ interface MainProps {
   onClearSection: () => void;
   animateHomeIntro: boolean;
   onHomeIntroComplete: () => void;
+  onToggleSidebar: () => void;
+  isSidebarOpen: boolean;
 }
 
 export const MainContent = (props: MainProps) => {
@@ -15,6 +17,15 @@ export const MainContent = (props: MainProps) => {
 
   return (
     <div className="main-content">
+      <button
+        type="button"
+        className="hamburger"
+        onClick={props.onToggleSidebar}
+        aria-label={props.isSidebarOpen ? "Close games menu" : "Open games menu"}
+        aria-expanded={props.isSidebarOpen}
+      >
+        &#9776;
+      </button>
       <div className="header" onClick={props.onClearSection}>
         <span
           className={`punch-line header__title ${animateHeader ? "" : "punch-line--static"}`}
