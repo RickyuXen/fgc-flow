@@ -47,6 +47,11 @@ const GAME_CONFIG = [
     gameFile: "ggstGameinfo.json",
     charactersFile: "ggstCharactersInfo.json",
   },
+  {
+    slug: "xko",
+    gameFile: "2xkogameinfo.json",
+    charactersFile: "2xkoCharactersInfo.json",
+  },
 ] as const;
 
 function readJson<T>(filename: string): T {

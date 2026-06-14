@@ -71,9 +71,17 @@ export const GAME_IMAGE_MANIFEST: Record<
       { name: "Dizzy", file: "dizzy.png" },
     ],
   },
+  xko: {
+    logoFile: "2xkologo.png",
+    characters: [
+      { name: "Ahri", file: "ahri.png" },
+      { name: "Ekko", file: "ekko.png" },
+    ],
+  },
 };
 
 export const GAME_FOLDER: Record<string, string> = {
   sf6: "SF6",
   ggst: "GGST",
+  xko: "2XKO",
 };
