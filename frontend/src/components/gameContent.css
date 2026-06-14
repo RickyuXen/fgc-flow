@@ -47,6 +47,7 @@
 }
 
 .game-mainpage p{
+  margin-top: 0;
   font-size: 2rem;
 }
 
@@ -95,8 +96,35 @@
 }
 
 .characters-list li{
-  margin: 0;
+  display: flex;
+  align-items: center;
+  margin: 0.741vh 0;
   transition: all 0.3s ease;
+}
+
+.character-image-frame {
+  flex-shrink: 0;
+  width: 20.741vh;
+  height: 10.37vh;
+  min-width: 20.741vh;
+  min-height: 10.37vh;
+  margin-right: 1.481vh;
+  border-radius: 10%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-image {
+  width: 20.741vh;
+  min-width: 20.741vh;
+  max-width: 20.741vh;
+  height: 10.37vh;
+  min-height: 10.37vh;
+  max-height: 10.37vh;
+  object-fit: fill;
+  flex-shrink: 0;
 }
 
 .characters-list li:hover{
@@ -130,10 +158,6 @@
   padding: 0.741vh 1.481vh;
   display: flex;
   white-space: nowrap;
-}
-
-.links{
-  margin-bottom: -5vh;
 }
 
 .tags-under-video{
