@@ -227,7 +227,7 @@ export const RightContent = (props: RightContentProps) => {
                 marginBottom: isMobile ? "0.65rem" : "-2vh",
                 marginTop: "0vh",
                 color: `${props.CharacterInfo.color}`,
-                fontSize: isMobile ? "1.75rem" : "3.5em",
+                fontSize: isMobile ? "1.75rem" : "3.25em",
                 textTransform: "uppercase",
               }}
             >
