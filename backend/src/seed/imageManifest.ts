@@ -75,7 +75,21 @@ export const GAME_IMAGE_MANIFEST: Record<
     logoFile: "2xkologo.png",
     characters: [
       { name: "Ahri", file: "ahri.png" },
+      { name: "Akali", file: "akali.png" },
+      { name: "Blitzcrank", file: "blitzcrank.png" },
+      { name: "Braum", file: "braum.png" },
+      { name: "Caitlyn", file: "caitlyn.png" },
+      { name: "Darius", file: "darius.png" },
       { name: "Ekko", file: "ekko.png" },
+      { name: "Illaoi", file: "illaoi.png" },
+      { name: "Jinx", file: "jinx.png" },
+      { name: "Senna", file: "senna.png" },
+      { name: "Teemo", file: "teemo.png" },
+      { name: "Thresh", file: "thresh.png" },
+      { name: "Vi", file: "vi.png" },
+      { name: "Warwick", file: "warwick.png" },
+      { name: "Yasuo", file: "yasuo.png" },
+
     ],
   },
 };

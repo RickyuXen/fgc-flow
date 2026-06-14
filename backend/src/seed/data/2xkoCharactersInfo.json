@@ -4,8 +4,8 @@
       "tags": ["Rushdown", "Mobility", "Mix-Up", "Fox"],
       "overview": "A highly mobile trickster who excels at weaving in and out of combat, Ahri uses swift movement, deceptive mix-ups, and relentless pressure to keep opponents guessing.",
       "difficulty": "2",
-      "video": "https://www.youtube.com/watch?v=9nRmRp903gs",
-      "notablePlayers": ["Sajam", "Leffen", "Jmcrofts"],
+      "video": "https://www.youtube.com/watch?v=EOr6cnybcPg",
+      "notablePlayers": ["Leffen", "Yasha", "SonicFox"],
       "resources": [
         "https://2xko.riotgames.com/en-us/champions/ahri/",
         "https://wiki.play2xko.com/en-us/Ahri/Combos",
@@ -22,30 +22,340 @@
         "Relies on Movement and Execution"
       ]
     },
-    [
-        {
-          "name": "Ekko",
-          "tags": ["Setplay", "Mobility", "Traps", "Time-Reset"],
-          "overview": "A high-speed setup-based fighter who uses time manipulation and creative movement to control space, Ekko excels at creating layered pressure, baiting responses, and resetting neutral to his advantage.",
-          "difficulty": "3",
-          "video": "https://www.youtube.com/results?search_query=2XKO+Ekko+gameplay",
-          "notablePlayers": ["Maximilian Dood", "Sajam", "Jmcrofts"],
-          "resources": [
-           "https://2xko.riotgames.com/en-us/champions/ekko/",
-            "https://wiki.play2xko.com/en-us/Ekko/Combos",
-            "https://replaytheater.app/?game=2xko&c1=Ekko"
-          ],
-          "color": "#4DB6AC",
-          "pros": [
-            "Strong Setup Pressure",
-            "High Mobility and Escape Options",
-            "Excellent Tempo Control"
-          ],
-          "cons": [
-            "Requires Planning and Lab Time",
-            "Can Struggle Under Heavy Pressure",
-            "Complex Execution Compared to Simple Characters"
-          ]
-        }
+    {
+      "name": "Ekko",
+      "tags": ["Setplay", "Mobility", "Traps", "Time-Reset"],
+      "overview": "A high-speed setup-based fighter who uses time manipulation and creative movement to control space, Ekko excels at creating layered pressure, baiting responses, and resetting neutral to his advantage.",
+      "difficulty": "3",
+      "video": "https://www.youtube.com/watch?v=0x2Lhj8Ibwo",
+      "notablePlayers": ["SonicFox", "INZEM", "Wawa"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/ekko/",
+        "https://wiki.play2xko.com/en-us/Ekko/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Ekko"
+      ],
+      "color": "#4DB6AC",
+      "pros": [
+        "Strong Setup Pressure",
+        "High Mobility and Escape Options",
+        "Excellent Tempo Control"
+      ],
+      "cons": [
+        "Requires Planning and Lab Time",
+        "Can Struggle Under Heavy Pressure",
+        "Complex Execution Compared to Simple Characters"
       ]
+    },
+    {
+      "name": "Darius",
+      "tags": ["Grappler", "Juggernaut", "Strike-Throw", "Corner"],
+      "overview": "A brutal close-range powerhouse who dominates with heavy strikes and command grab pressure. Darius excels at forcing respect in close quarters and converting single hits into devastating damage.",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=mj8Ym4Q_66c",
+      "notablePlayers": ["RayRay", "Supernoon", "INZEM"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/darius/",
+        "https://wiki.play2xko.com/en-us/Darius/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Darius"
+      ],
+      "color": "#8B1E1E",
+      "pros": [
+        "Extremely High Damage",
+        "Strong Command Grab Pressure",
+        "Excellent Corner Control"
+      ],
+      "cons": [
+        "Slow Movement",
+        "Struggles Against Zoning",
+        "High Commitment Attacks"
+      ]
+    },
+    {
+      "name": "Braum",
+      "tags": ["Defensive", "Tank", "Support", "Shield"],
+      "overview": "A protective frontline fighter who excels at absorbing pressure and enabling his partner. Braum controls space with his shield and provides strong defensive utility for team-based play.",
+      "difficulty": "1",
+      "video": "https://www.youtube.com/watch?v=vEcGceXBQoE",
+      "notablePlayers": ["TrueDevin", "Nyudu", "Torpan"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/braum/",
+        "https://wiki.play2xko.com/en-us/Braum/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Braum"
+      ],
+      "color": "#5BB0FF",
+      "pros": [
+        "Excellent Defense and Durability",
+        "Strong Team Synergy Tools",
+        "Easy to Pick Up"
+      ],
+      "cons": [
+        "Low Solo Damage",
+        "Limited Offensive Options",
+        "Relies on Team Coordination"
+      ]
+    },
+    {
+      "name": "Illaoi",
+      "tags": ["Setplay", "Zoner", "Control", "Summons"],
+      "overview": "A pressure-heavy fighter who controls space with spectral tentacles and oppressive setplay. Illaoi thrives by forcing opponents into unfavorable positions and punishing movement.",
+      "difficulty": "3",
+      "video": "https://www.youtube.com/watch?v=j-HC73cGWsI",
+      "notablePlayers": ["INZEM", "GenisGod", "SonicFox"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/illaoi/",
+        "https://wiki.play2xko.com/en-us/Illaoi/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Illaoi"
+      ],
+      "color": "#2E7D6B",
+      "pros": [
+        "Strong Screen Control",
+        "High Reward Setplay",
+        "Excellent Anti-Approach Tools"
+      ],
+      "cons": [
+        "Setup Dependent",
+        "Slow Recovery on Some Moves",
+        "Weak When Disrupted"
+      ]
+    },
+    {
+      "name": "Jinx",
+      "tags": ["Zoner", "Rushdown", "Chaos", "Traps"],
+      "overview": "A chaotic ranged fighter who mixes explosive zoning with aggressive follow-ups. Jinx excels at controlling space with projectiles and transitioning into high-tempo offense.",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=FUMtB8Z8M1c",
+      "notablePlayers": ["Wawa", "marcpq", "Torpan"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/jinx/",
+        "https://wiki.play2xko.com/en-us/Jinx/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Jinx"
+      ],
+      "color": "#E53935",
+      "pros": [
+        "Strong Projectile Control",
+        "High Snowball Potential",
+        "Flexible Gameplan"
+      ],
+      "cons": [
+        "Can Be Overwhelmed Up Close",
+        "Requires Good Spacing",
+        "Risky Commitments on Pressure"
+      ]
+    },
+    {
+      "name": "Yasuo",
+      "tags": ["Stance", "Footsies", "Parry", "Versatile"],
+      "overview": "A technical swordsman who blends defensive parries with fast-paced neutral control. Yasuo rewards precise timing and positioning, turning enemy mistakes into high-value punishes.",
+      "difficulty": "3",
+      "video": "https://www.youtube.com/watch?v=vmx6h7wN3j4",
+      "notablePlayers": ["Leffen", "Yasha", "SonicFox"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/yasuo/",
+        "https://wiki.play2xko.com/en-us/Yasuo/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Yasuo"
+      ],
+      "color": "#1E88E5",
+      "pros": [
+        "Strong Neutral Tools",
+        "High Skill Ceiling",
+        "Good Defensive Parry Options"
+      ],
+      "cons": [
+        "Execution and Timing Heavy",
+        "Requires Matchup Knowledge",
+        "Punishable on Misreads"
+      ]
+    },
+    {
+      "name": "Vi",
+      "tags": ["Bruiser", "Rushdown", "Armor Break", "Engage"],
+      "overview": "A relentless close-range brawler who excels at forcing engagements and breaking through defensive play. Vi uses explosive dashes and heavy punches to stay on top of opponents and convert hits into strong knockdowns.",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=B6Jntcnc6g8",
+      "notablePlayers": ["Razzo", "Nitro", "MysticSmash"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/vi/",
+        "https://wiki.play2xko.com/en-us/Vi/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Vi"
+      ],
+      "color": "#E07A2F",
+      "pros": [
+        "Strong Engagement Tools",
+        "High Damage Off Hits",
+        "Easy to Start Pressure"
+      ],
+      "cons": [
+        "Linear Approach Options",
+        "Can Be Zoned Out",
+        "Predictable Without Mix"
+      ]
+    },
+    {
+      "name": "Teemo",
+      "tags": ["Zoner", "Traps", "Annoyance", "Setplay"],
+      "overview": "A trickster fighter who specializes in controlling space through traps and ranged harassment. Teemo frustrates opponents by limiting movement and punishing careless approaches.",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=A8-Uw_sypMs",
+      "notablePlayers": ["Toshi", "Haru", "GenisGod"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/teemo/",
+        "https://wiki.play2xko.com/en-us/Teemo/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Teemo"
+      ],
+      "color": "#7CB342",
+      "pros": [
+        "Strong Space Control",
+        "Excellent Trap Setup",
+        "Annoying Chip Pressure"
+      ],
+      "cons": [
+        "Low Health/Defense",
+        "Weak When Cornered",
+        "Requires Setup Time"
+      ]
+    },
+    {
+      "name": "Blitzcrank",
+      "tags": ["Grappler", "Hook", "Armor", "Punish"],
+      "overview": "A heavyweight grappler who excels at catching opponents with long-range grabs and punishing mistakes. Blitzcrank creates constant threat with his ability to convert a single grab into huge momentum shifts.",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=oQGjBg-JZdI",
+      "notablePlayers": ["SonicFox", "INZEM", "Heapski"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/blitzcrank/",
+        "https://wiki.play2xko.com/en-us/Blitzcrank/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Blitzcrank"
+      ],
+      "color": "#F4C542",
+      "pros": [
+        "Long-Range Grab Threat",
+        "High Reward Punishes",
+        "Strong Momentum Shifts"
+      ],
+      "cons": [
+        "Slow Movement",
+        "Predictable Without Mindgames",
+        "Punishable Whiffs"
+      ]
+    },
+    {
+      "name": "Akali",
+      "tags": ["Assassin", "Rushdown", "Stealth", "Mobility"],
+      "overview": "A high-speed assassin who excels at diving in and out of combat with evasive movement and burst damage. Akali thrives on confusion, punishing mistakes with rapid confirms and relentless pressure.",
+      "difficulty": "3",
+      "video": "https://www.youtube.com/watch?v=dS4oNyE3lwg",
+      "notablePlayers": ["Wawa", "Yasha", "Leffen"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/akali/",
+        "https://wiki.play2xko.com/en-us/Akali/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Akali"
+      ],
+      "color": "#9C27B0",
+      "pros": [
+        "High Burst Damage",
+        "Excellent Mobility and Evasion",
+        "Strong Whiff Punish Potential"
+      ],
+      "cons": [
+        "Execution Heavy",
+        "Fragile if Read",
+        "Requires Strong Decision Making"
+      ]
+    },
+    {
+      "name": "Senna",
+      "tags": ["Zoner", "Support", "Scaling", "Sniper"],
+      "overview": "A ranged support fighter who scales into a powerful long-range threat over time. Senna controls space with precise shots while supporting her team through sustained pressure.",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=XO8mI04p27U",
+      "notablePlayers": ["Nephew", "Razzo", "marcpq"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/senna/",
+        "https://wiki.play2xko.com/en-us/Senna/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Senna"
+      ],
+      "color": "#1B5E20",
+      "pros": [
+        "Strong Long-Range Scaling",
+        "Good Team Utility",
+        "Safe Neutral Control"
+      ],
+      "cons": [
+        "Weak Early Pressure",
+        "Relies on Positioning",
+        "Can Be Overwhelmed Up Close"
+      ]
+    },
+    {
+      "name": "Thresh",
+      "tags": ["Grappler", "Hook", "Utility"],
+      "overview": "A control-oriented fighter who uses hooks and utility tools to manipulate positioning. Thresh excels at catching opponents out of place and enabling devastating team conversions.",
+      "difficulty": "3",
+      "video": "https://www.youtube.com/watch?v=hev__34sZxs",
+      "notablePlayers": ["MysticSmash", "SonicFox", "TrueDevin"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/thresh/",
+        "https://wiki.play2xko.com/en-us/Thresh/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Thresh"
+      ],
+      "color": "#00ACC1",
+      "pros": [
+        "Strong Long-Range Catch Tools",
+        "High Utility in Team Play",
+        "Great Punish Potential"
+      ],
+      "cons": [
+        "Execution and Timing Dependent",
+        "Weak Without Confirmed Hooks",
+        "Can Struggle Under Pressure"
+      ]
+    },
+    {
+      "name": "Caitlyn",
+      "tags": ["Zoner", "Sniper", "Trap Setup", "Spacing"],
+      "overview": "A precision-based long-range fighter who controls space with traps and high-damage shots. Caitlyn excels at forcing opponents to navigate carefully through controlled zones.",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=JoV-j2Td8Kg",
+      "notablePlayers": ["marcpq", "GenisGod", "Nephew"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/caitlyn/",
+        "https://wiki.play2xko.com/en-us/Caitlyn/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Caitlyn"
+      ],
+      "color": "#1565C0",
+      "pros": [
+        "Excellent Long-Range Control",
+        "Strong Trap Setup",
+        "High Punish Damage"
+      ],
+      "cons": [
+        "Weak Close Defense",
+        "Setup Dependent",
+        "Linear Pressure Up Close"
+      ]
+    },
+    {
+      "name": "Warwick",
+      "tags": ["Rushdown", "Hunter", "Berserker", "Bloodlust"],
+      "overview": "A feral close-range predator who thrives on relentless pursuit, Warwick uses enhanced mobility, lunging attacks, and ramping aggression to stay on top of opponents once he engages.",
+      "difficulty": "2",
+      "video": "https://www.youtube.com/watch?v=4CRb0tPXCXY",
+      "notablePlayers": ["INZEM", "Nitro", "Haru"],
+      "resources": [
+        "https://2xko.riotgames.com/en-us/champions/warwick/",
+        "https://wiki.play2xko.com/en-us/Warwick/Combos",
+        "https://replaytheater.app/?game=2xko&c1=Warwick"
+      ],
+      "color": "#4CAF50",
+      "pros": [
+        "Extremely Strong Engage Tools",
+        "High Damage Off Close Hits",
+        "Snowballs Hard with Momentum"
+      ],
+      "cons": [
+        "Weak at Long Range",
+        "Linear Approach Options",
+        "Can Struggle When Zoned Out"
+      ]
+    }
   ]

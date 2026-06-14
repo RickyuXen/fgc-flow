@@ -21,6 +21,13 @@ const fontFaces = `
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'shapiro75Heavy';
+  src: url('${resolveAssetPath("/fonts/shapiro75.ttf")}') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 `;
 
 const style = document.createElement("style");
