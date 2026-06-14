@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { VolumeProvider } from "./components/VolumeContext";
 import { VolumeSlider } from "./components/VolumeSlider";
 import Sidebar from "./components/Sidebar";
@@ -13,6 +13,11 @@ function App() {
   const [selectedSlug, setSelectedSlug] = useState<string>("");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isSidebarOpen, setSideBar] = useState<boolean>(false);
+  const [homeIntroDone, setHomeIntroDone] = useState(false);
+
+  const handleHomeIntroComplete = useCallback(() => {
+    setHomeIntroDone(true);
+  }, []);
 
   useEffect(() => {
     getGames()
@@ -56,6 +61,8 @@ function App() {
           selectedGame={selectedGame}
           selectedSlug={selectedSlug}
           onClearSection={handleClearSection}
+          animateHomeIntro={!homeIntroDone}
+          onHomeIntroComplete={handleHomeIntroComplete}
         />
         <VolumeSlider />
       </VolumeProvider>

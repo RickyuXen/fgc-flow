@@ -152,7 +152,10 @@ body {
 }
 
 .header {
-  font-size: 3.2vh; 
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  font-size: 3.2vh;
   font-weight: 1000;
   margin-bottom: 1.5vh; 
   padding-top: 0.7vh; 
