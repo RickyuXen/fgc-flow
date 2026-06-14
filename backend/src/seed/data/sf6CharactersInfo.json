@@ -285,5 +285,196 @@
     "color": "orange",
     "pros": ["Strong Specials", "Explosive Combos", "Good Neutral"],
     "cons": ["Lacks Range", "Predictable Approach"]
+  },
+  {
+    "name": "Mai",
+    "tags": [
+      "Mobile",
+      "Rushdown",
+      "Fire",
+      "Mix-Up"
+    ],
+    "overview": "A swift and agile kunoichi who uses blazing fire techniques, aerial mobility, and relentless pressure to keep opponents guessing. Mai excels at controlling the pace of the match with tricky movement and explosive offensive sequences.",
+    "difficulty": "2",
+    "video": "https://www.youtube.com/watch?v=bmqhUMeXXpM",
+    "notablePlayers": [
+      "Oil King",
+      "Xian"
+    ],
+    "resources": [
+      "https://www.streetfighter.com/6/character/mai",
+      "https://wiki.supercombo.gg/w/Street_Fighter_6/Mai",
+      "https://replaytheater.app/?game=sf6&c1=Mai"
+    ],
+    "color": "red",
+    "pros": [
+      "Excellent Mobility",
+      "Strong Pressure",
+      "Versatile Fireball Game"
+    ],
+    "cons": [
+      "Lower Health",
+      "Spacing Dependent",
+      "Can Struggle Against Strong Anti-Airs"
+    ]
+  },
+  {
+    "name": "Elena",
+    "tags": [
+      "Mobile",
+      "Technical",
+      "Capoeira",
+      "Mix-Up"
+    ],
+    "overview": "A graceful capoeira master who overwhelms opponents with fluid movement, long-reaching kicks, and unpredictable stance transitions. Elena excels at controlling space and creating creative offensive sequences while maintaining a cheerful, free-spirited fighting style.",
+    "difficulty": "3",
+    "video": "https://www.youtube.com/watch?v=zBcmqthROiY",
+    "notablePlayers": [
+      "MenaRD",
+      "Hibiki The Beast"
+    ],
+    "resources": [
+      "https://www.streetfighter.com/6/character/elena",
+      "https://wiki.supercombo.gg/w/Street_Fighter_6/Elena",
+      "https://replaytheater.app/?game=sf6&c1=Elena"
+    ],
+    "color": "green",
+    "pros": [
+      "Excellent Mobility",
+      "Long-Range Normals",
+      "Strong Mix-Up Potential"
+    ],
+    "cons": [
+      "Execution Heavy",
+      "Lower Raw Damage",
+      "Requires Strong Spacing"
+    ]
+  },
+  {
+    "name": "Sagat",
+    "tags": [
+      "Powerful",
+      "Zoner",
+      "Muay Thai",
+      "Fundamentals"
+    ],
+    "overview": "The legendary emperor of Muay Thai dominates the battlefield with devastating strikes, towering reach, and powerful projectile control. Sagat rewards patient, methodical play and excels at controlling space before punishing mistakes with crushing damage.",
+    "difficulty": "2",
+    "video": "https://www.youtube.com/watch?v=rvZZCz95XDc",
+    "notablePlayers": [
+      "Bonchan",
+      "Xian"
+    ],
+    "resources": [
+      "https://www.streetfighter.com/6/character/sagat",
+      "https://wiki.supercombo.gg/w/Street_Fighter_6/Sagat",
+      "https://replaytheater.app/?game=sf6&c1=Sagat"
+    ],
+    "color": "gold",
+    "pros": [
+      "Excellent Space Control",
+      "High Damage Output",
+      "Long-Reaching Normals"
+    ],
+    "cons": [
+      "Large Hurtbox",
+      "Limited Mobility",
+      "Can Struggle Under Pressure"
+    ]
+  },{
+    "name": "C. Viper",
+    "tags": [
+      "Technical",
+      "Mobile",
+      "Mix-Up",
+      "Explosive"
+    ],
+    "overview": "An elite undercover agent equipped with advanced combat technology, C. Viper uses high-speed movement, tricky feints, and explosive attacks to keep opponents constantly on edge. Her versatile toolkit rewards creativity and strong execution.",
+    "difficulty": "4",
+    "video": "https://www.youtube.com/watch?v=p4QOJ9P2-yA",
+    "notablePlayers": [
+      "Wolfkrone",
+      "Latif",
+      "Kazunoko"
+    ],
+    "resources": [
+      "https://www.streetfighter.com/6/character/cviper",
+      "https://wiki.supercombo.gg/w/Street_Fighter_6/C._Viper",
+      "https://replaytheater.app/?game=sf6&c1=C.%20Viper"
+    ],
+    "color": "red",
+    "pros": [
+      "Powerful Mix-Up Game",
+      "Exceptional Mobility",
+      "Versatile Offensive Tools"
+    ],
+    "cons": [
+      "Execution Heavy",
+      "Requires Strong Resource Management",
+      "Punishable if Read"
+    ]
+  },{
+    "name": "Alex",
+    "tags": [
+      "Powerful",
+      "Grappler",
+      "Rushdown",
+      "Wrestling"
+    ],
+    "overview": "A hard-hitting professional wrestler who overwhelms opponents with explosive strikes, command grabs, and relentless close-range offense. Alex thrives once he gets in, turning every opening into a brutal sequence of pressure and damage.",
+    "difficulty": "2",
+    "video": "https://www.youtube.com/watch?v=dxOZe4NhaM0",
+    "notablePlayers": [
+      "Gunfight",
+      "KSK"
+    ],
+    "resources": [
+      "https://www.streetfighter.com/6/character/alex",
+      "https://wiki.supercombo.gg/w/Street_Fighter_6/Alex",
+      "https://replaytheater.app/?game=sf6&c1=Alex"
+    ],
+    "color": "blue",
+    "pros": [
+      "High Damage",
+      "Strong Command Grabs",
+      "Excellent Close-Range Pressure"
+    ],
+    "cons": [
+      "Weak Long-Range Options",
+      "Can Be Zoned Out",
+      "Relies on Closing Distance"
+    ]
+  },
+  {
+    "name": "Ingrid",
+    "tags": [
+      "Mobile",
+      "Technical",
+      "Mystical",
+      "Balanced"
+    ],
+    "overview": "A mysterious and elegant fighter who harnesses the power of the sun through graceful movement and versatile energy attacks. Ingrid blends mobility, unique projectile options, and flexible offense into a well-rounded but technical playstyle.",
+    "difficulty": "3",
+    "video": "https://www.youtube.com/watch?v=IsAcDyQ7-44",
+    "notablePlayers": [
+      "Jwong",
+      "Kusumondo"
+    ],
+    "resources": [
+      "https://www.streetfighter.com/6/character/ingrid",
+      "https://wiki.supercombo.gg/w/Street_Fighter_6/Ingrid",
+      "https://replaytheater.app/?game=sf6&c1=Ingrid"
+    ],
+    "color": "yellow",
+    "pros": [
+      "Versatile Toolkit",
+      "Strong Mobility",
+      "Solid Mid-Range Control"
+    ],
+    "cons": [
+      "Technical Learning Curve",
+      "Lower Raw Damage",
+      "Requires Good Spacing"
+    ]
   }
 ]

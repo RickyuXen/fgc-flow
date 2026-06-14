@@ -29,6 +29,12 @@ export const GAME_IMAGE_MANIFEST: Record<
       { name: "Akuma", file: "akuma.png" },
       { name: "M. Bison", file: "mbison.png" },
       { name: "Terry", file: "terry.png" },
+      { name: "Mai", file: "mai.png" },
+      { name: "Elena", file: "elena.png" },
+      { name: "Sagat", file: "sagat.png" },
+      { name: "C. Viper", file: "cviper.png" },
+      { name: "Alex", file: "alex.png" },
+      { name: "Ingrid", file: "ingrid.png" },
     ],
   },
   ggst: {

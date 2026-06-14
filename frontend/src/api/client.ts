@@ -1,4 +1,6 @@
-const apiBase = import.meta.env.VITE_API_URL ?? "";
+const apiBase =
+  import.meta.env.VITE_API_URL ??
+  (import.meta.env.DEV ? "" : "https://fgc-flow.onrender.com");
 
 async function request<T>(path: string): Promise<T> {
   const response = await fetch(`${apiBase}${path}`);

@@ -1,12 +1,12 @@
-import { defineConfig, type Plugin } from 'vite'
+import { defineConfig, type Connect, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 
 function fgcFlowTrailingSlashRedirect(): Plugin {
   return {
     name: 'fgc-flow-trailing-slash-redirect',
     configureServer(server) {
-      server.middlewares.use((req, res, next) => {
-        const [pathname, search = ''] = (req.url ?? '').split('?')
+      server.middlewares.use((req: Connect.IncomingMessage, res, next) => {
+        const [pathname, search = ''] = (req.originalUrl ?? '').split('?')
         const query = search ? `?${search}` : ''
 
         if (pathname === '/fgc-flow') {
