@@ -2,11 +2,7 @@ import "../components/gameContent.css";
 import { useEffect, useState } from "react";
 import { Characters } from "../components/Characters";
 import { RightContent } from "../components/RightContent";
-import {
-  getCharacters,
-  getGame,
-  resolveAssetPath,
-} from "../api/client";
+import { getCharacters, getGame, resolveAssetPath } from "../api/client";
 import type { CharacterInfo, GameInfo } from "../api/types";
 
 interface GameContentProps {
@@ -42,7 +38,7 @@ export const GameContent = ({ slug }: GameContentProps) => {
         chars.map((character) => ({
           name: character.name,
           image: resolveAssetPath(character.imagePath),
-        }))
+        })),
       );
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load game data");
@@ -57,7 +53,7 @@ export const GameContent = ({ slug }: GameContentProps) => {
 
   const handleSelectChar = (characterName: string, index: number) => {
     const foundCharInfo = characterInfos.find(
-      (char) => char.name === characterName
+      (char) => char.name === characterName,
     );
     setSelectedIndex(index);
     setSelectedCharInfo(foundCharInfo || null);
@@ -70,7 +66,10 @@ export const GameContent = ({ slug }: GameContentProps) => {
 
   if (loading) {
     return (
-      <div className="container" style={{ padding: "2rem", textAlign: "center" }}>
+      <div
+        className="container"
+        style={{ padding: "2rem", textAlign: "center" }}
+      >
         Loading game data...
       </div>
     );
@@ -78,7 +77,10 @@ export const GameContent = ({ slug }: GameContentProps) => {
 
   if (error || !gameInfo) {
     return (
-      <div className="container" style={{ padding: "2rem", textAlign: "center" }}>
+      <div
+        className="container"
+        style={{ padding: "2rem", textAlign: "center" }}
+      >
         <p>{error ?? "Game not found."}</p>
         <button type="button" onClick={() => void loadData()}>
           Retry
